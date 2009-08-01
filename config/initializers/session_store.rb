@@ -6,7 +6,7 @@
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
   :key         => '_twitterous_session',
-  :secret      => '346485bad3ec502cad70ffdd0fe892c47b3da28d431e7230401e51639d07a94094301acae0269f8e984501be0d45a13770369e34fe76e1c5341c0755384ef8e2'
+  :secret      => '416d9f9abe4e5addd5547a0261512ce99c2669dc371515638c9690f08f029fd6e09ef36b76ff7750888db61119e538af64d810fb1658e222ee324723960fc0c8'
 }
 
 # Use the database for sessions instead of the cookie-based default,
