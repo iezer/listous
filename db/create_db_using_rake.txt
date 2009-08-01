@@ -1,0 +1,2 @@
+generate scaffold List name:string owner:string permissions:string
+generate scaffold Item
