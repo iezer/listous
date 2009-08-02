@@ -1,32 +1,12 @@
-<h1>Editing item</h1>
+<h1>Editing items</h1>
 
 <% form_for(@item) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </p>
-  <p>
-    <%= f.label :text %><br />
-    <%= f.text_field :text %>
-  </p>
-  <p>
-    <%= f.label :fullMessage %><br />
-    <%= f.text_field :fullMessage %>
-  </p>
-  <p>
-    <%= f.label :submitted %><br />
-    <%= f.date_select :submitted %>
-  </p>
-  <p>
-    <%= f.label :list %><br />
-    <%= f.text_field :list %>
-  </p>
-  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @item %> |
+<%= link_to 'Show', @items %> |
 <%= link_to 'Back', items_path %>

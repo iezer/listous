@@ -2,18 +2,28 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.xml
   def index
-    @items = Item.all
+    #print "hello"
+    #print params
+    #@list = List.find(params[:list_id])
+    @list = List.find(1)
+    @items = @list.items 
+    #@items = Item.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @items }
-    end
+   # respond_to do |format|
+   #   format.html # index.html.erb
+   #   format.xml  { render :xml => @items }
+   # end
   end
 
   # GET /items/1
   # GET /items/1.xml
   def show
-    @item = Item.find(params[:id])
+   # @list = List.find(params[:list_id])
+   # @items = @list.items.find(params[:id]) 
+    @item = Item.find (params[:id])
+  #   @list = List.find( params[:item] [:list_id] )
+    # @item = @list.items.build(params[:item])  
+    # @items = Items.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,32 +34,43 @@ class ItemsController < ApplicationController
   # GET /items/new
   # GET /items/new.xml
   def new
+    #@list = List.find(params[:list_id])
+    #@list = List.find(1)
+    #@item = @list.items.build 
+    # @items = Items.all
     @item = Item.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @item }
+      format.xml  { render :xml => @items }
     end
   end
 
   # GET /items/1/edit
   def edit
+    #@list = List.find(params[:list_id])
     @item = Item.find(params[:id])
+    
+    # @items = Items.all
+
+#    @items = Items.find(params[:id])
   end
 
   # POST /items
   # POST /items.xml
   def create
-    @item = Item.new(params[:item])
+     @list = List.find( params[:item] [:list_id] )
+     @item = @list.items.build(params[:item]) 
+    #@items = Items.new(params[:items])
 
     respond_to do |format|
       if @item.save
-        flash[:notice] = 'Item was successfully created.'
+        flash[:notice] = 'Items was successfully created.'
         format.html { redirect_to(@item) }
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @item.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @items.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -57,16 +78,19 @@ class ItemsController < ApplicationController
   # PUT /items/1
   # PUT /items/1.xml
   def update
-    @item = Item.find(params[:id])
+     @list = List.find(params[:list_id])
+     @item = Item.find(params[:id]) 
+     
+    #@items = Items.find(params[:id])
 
     respond_to do |format|
-      if @item.update_attributes(params[:item])
-        flash[:notice] = 'Item was successfully updated.'
-        format.html { redirect_to(@item) }
+      if @items.update_attributes(params[:items])
+        flash[:notice] = 'Items was successfully updated.'
+        format.html { redirect_to(@items) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @item.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @items.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -74,8 +98,8 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.xml
   def destroy
-    @item = Item.find(params[:id])
-    @item.destroy
+    @items = Item.find(params[:id])
+    @items.destroy
 
     respond_to do |format|
       format.html { redirect_to(items_url) }

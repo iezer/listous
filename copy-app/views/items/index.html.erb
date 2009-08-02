@@ -1,0 +1,35 @@
+<h1>Items for <%= @post.title %></h1>
+<table>
+    <tr>
+        <th>
+            Itemer
+        </th>
+        <th>
+            Body
+        </th>
+    </tr>
+    <% for item in @items %>
+    <tr>
+        <td>
+            <%=h item.itemer %>
+        </td>
+        <td>
+            <%=h item.author %>
+        </td>
+		<td>
+            <%=h item.list %>
+        </td>
+        <td>
+            <%= link_to 'Show', post_item_path(@post, item) %>
+        </td>
+        <td>
+            <%= link_to 'Edit', edit_post_item_path(@post, item) %>
+        </td>
+        <td>
+            <%= link_to 'Destroy', post_item_path(@post, item), :confirm => 'Are you sure?', :method => :delete %>
+        </td>
+    </tr>
+    <% end %>
+</table>
+<br/>
+<%= link_to 'New item', new_post_item_path(@post) %><%= link_to 'Back to Post', @post %>

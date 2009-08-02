@@ -1,17 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :items
 
-  map.resources :lists
+  map.resources :items
 
-  map.resources :lists
-
-  map.resources :lists
-
-  map.resources :lists
-
-  map.resources :lists
-
-  map.resources :lists
+  map.resources :lists, :has_many => :items 
 
   # The priority is based upon order of creation: first created -> highest priority.
 

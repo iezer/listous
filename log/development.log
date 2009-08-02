@@ -105,3 +105,2758 @@ Processing ItemsController#index (for 127.0.0.1 at 2009-08-01 17:59:21) [GET]
 Rendering template within layouts/items
 Rendering items/index
 Completed in 89ms (View: 59, DB: 0) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#new (for 127.0.0.1 at 2009-08-01 18:12:36) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/new
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/lists/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#create (for 127.0.0.1 at 2009-08-01 18:13:42) [POST]
+  Parameters: {"list"=>{"name"=>"Books", "permission"=>"private", "owner"=>"@isaacezer"}, "commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU="}
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mList Create (0.3ms)[0m   [0mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('Books', '2009-08-01 09:13:42', 'private', '@isaacezer', '2009-08-01 09:13:42')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/lists/1
+Completed in 38ms (DB: 2) | 302 Found [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-01 18:13:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/lists/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-01 18:13:45) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 9ms (View: 4, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#new (for 127.0.0.1 at 2009-08-01 18:13:47) [GET]
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/new
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/lists/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#create (for 127.0.0.1 at 2009-08-01 18:14:10) [POST]
+  Parameters: {"list"=>{"name"=>"Songs", "permission"=>"public", "owner"=>"@isaacezer"}, "commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU="}
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mList Create (0.2ms)[0m   [0;1mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('Songs', '2009-08-01 09:14:10', 'public', '@isaacezer', '2009-08-01 09:14:10')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/lists/2
+Completed in 8ms (DB: 2) | 302 Found [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-01 18:14:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 2) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 8ms (View: 2, DB: 2) | 200 OK [http://localhost/lists/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-01 18:14:12) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-01 18:14:17) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 5ms (View: 1, DB: 1) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-01 18:14:19) [GET]
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 96ms (View: 90, DB: 1) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:15:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"adfd", "text"=>"Gladwell, The Tipping Point", "author"=>"@isaacezer", "fullMessage"=>"@twitterous books Gladwell, The Tipping Point", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20645530) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:15:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"books", "text"=>"Gladwell, The Tipping Point", "author"=>"@isaacezer", "fullMessage"=>"@twitterous books Gladwell, The Tipping Point", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20046970) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:15:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"book", "text"=>"Gladwell, The Tipping Point", "author"=>"@isaacezer", "fullMessage"=>"@twitterous books Gladwell, The Tipping Point", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#19574650) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (98.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-01 18:19:52) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (69.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 95ms (View: 15, DB: 70) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-01 18:20:04) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 58ms (View: 10, DB: 1) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-01 18:20:06) [GET]
+  [4;35;1mItem Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 65ms (View: 58, DB: 2) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:20:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"books", "text"=>"The Tipping Point by Gladwell", "author"=>"@isaacezer", "fullMessage"=>"later", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20109670) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-01 18:26:21) [GET]
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-01 18:26:24) [GET]
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-01 18:26:30) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-01 18:26:33) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-01 18:26:41) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-01 18:26:44) [GET]
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 60ms (View: 54, DB: 1) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:27:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"books", "text"=>"tipping point", "author"=>"@isaacezer", "fullMessage"=>"later", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#19727070) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:29:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"tipping point", "author"=>"@isaacezer", "fullMessage"=>"later", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20687430) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-01 18:50:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"tipping point", "author"=>"@isaacezer", "fullMessage"=>"later", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20192920) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 15:59:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"tipping point", "author"=>"@isaacezer", "fullMessage"=>"later", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"1"}}
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#19497360) expected, got String(#113650)):
+  app/controllers/items_controller.rb:43:in `new'
+  app/controllers/items_controller.rb:43:in `create'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  /usr/bin/rdebug-ide:19:in `load'
+  /usr/bin/rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (124.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 16:07:52) [GET]
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 117ms (View: 106, DB: 2) | 200 OK [http://localhost/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:08:22) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 28ms (View: 16, DB: 2) | 200 OK [http://localhost/Lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-02 16:08:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.5ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/lists/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:08:28) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 13ms (View: 5, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:09:27) [GET]
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 13ms (View: 5, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:09:30) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:09:31) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:09:32) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:10:32) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://localhost/lists]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:10:37) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 34ms (View: 29, DB: 1) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 16:10:39) [GET]
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/items/new]
+  [4;35;1mSQL (2.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 16:10:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"hello", "author"=>"@isaacezer", "fullMessage"=>"asdf", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:43:in `create'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  /usr/bin/rdebug-ide:19:in `load'
+  /usr/bin/rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (49.4ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 16:12:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"hello", "author"=>"@isaacezer", "fullMessage"=>"asdf", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:43:in `create'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_load'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/lib/ruby-debug.rb:101:in `debug_program'
+  /Library/Ruby/Gems/1.8/gems/ruby-debug-ide-0.4.5/bin/rdebug-ide:82
+  /usr/bin/rdebug-ide:19:in `load'
+  /usr/bin/rdebug-ide:19
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:12:43) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:12:44) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:13:06) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:13:19) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:13:21) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:13:21) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:13:21) [GET]
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:13:22) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:16:45) [GET]
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 16:16:48) [GET]
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 111ms (View: 104, DB: 2) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 16:17:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@isaacezer", "fullMessage"=>"adf", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:43:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 16:21:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@isaacezer", "fullMessage"=>"adf", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:44:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (77.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 16:21:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"bBdekvdFHwbOaKpCJ9AAcCBPXwzcFZr9TRfGNEbaCpU=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@isaacezer", "fullMessage"=>"adf", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:44:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (30.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 16:46:16) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 26ms (View: 14, DB: 2) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 16:46:19) [GET]
+Rendering template within layouts/items
+Rendering items/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 16:46:33) [GET]
+Rendering template within layouts/items
+Rendering items/new
+Completed in 50ms (View: 49, DB: 0) | 200 OK [http://localhost/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-02 16:46:43) [GET]
+
+ActionController::RoutingError (No route matches "/app/views/items/new" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:00:34) [GET]
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:3:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (38.3ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:07:20) [GET]
+
+NameError (uninitialized constant ItemsController::Post):
+  app/controllers/items_controller.rb:3:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:09:06) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:3:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (79.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-02 17:17:45) [GET]
+
+ActionController::RoutingError (No route matches "/list" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 17:17:47) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 72ms (View: 59, DB: 2) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:17:50) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:20:53) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:29:30) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:6:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (78.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:34:21) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:6:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (78.8ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:35:15) [GET]
+Rendering template within layouts/items
+Rendering items/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #7 of app/views/items/index.html.erb:
+4:   <tr>
+5:   </tr>
+6: 
+7: <% @items.each do |items| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', items %></td>
+10:     <td><%= link_to 'Edit', edit_items_path(items) %></td>
+
+    app/views/items/index.html.erb:7
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (87.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:36:07) [GET]
+
+NameError (uninitialized constant ItemsController::Items):
+  app/controllers/items_controller.rb:9:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (79.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:38:28) [GET]
+
+ArgumentError (Unknown key(s): list_id):
+  app/controllers/items_controller.rb:8:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (80.1ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:39:49) [GET]
+
+ArgumentError (Unknown key(s): name):
+  app/controllers/items_controller.rb:8:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mList Columns (359.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 17:59:40) [GET]
+  [4;36;1mList Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+
+NameError (uninitialized constant ItemsController::Items):
+  app/controllers/items_controller.rb:10:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (82.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:00:18) [GET]
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (17.1ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x171e0d4>) on line #10 of app/views/items/index.html.erb:
+7: <% @items.each do |items| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', items %></td>
+10:     <td><%= link_to 'Edit', edit_items_path(items) %></td>
+11:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+12:   </tr>
+13: <% end %>
+
+    app/views/items/index.html.erb:10
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:00:55) [GET]
+  [4;36;1mList Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_items_path' for #<ActionView::Base:0x264a01c>) on line #16 of app/views/items/index.html.erb:
+13: 
+14: <br />
+15: 
+16: <%= link_to 'New items', new_items_path %>
+
+    app/views/items/index.html.erb:16
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (112.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:00:58) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.8ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_items_path' for #<ActionView::Base:0x2761a04>) on line #16 of app/views/items/index.html.erb:
+13: 
+14: <br />
+15: 
+16: <%= link_to 'New items', new_items_path %>
+
+    app/views/items/index.html.erb:16
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:01:59) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.8ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x25ffddc>) on line #10 of app/views/items/index.html.erb:
+7: <% @items.each do |items| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', items %></td>
+10: <!--	<td><%= link_to 'Edit', edit_items_path(items) %></td>
+11:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+12: -->
+13:   </tr>
+
+    app/views/items/index.html.erb:10
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (111.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:02:01) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (1.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x26f3ff4>) on line #10 of app/views/items/index.html.erb:
+7: <% @items.each do |items| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', items %></td>
+10: <!--	<td><%= link_to 'Edit', edit_items_path(items) %></td>
+11:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+12: -->
+13:   </tr>
+
+    app/views/items/index.html.erb:10
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:02:02) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (1.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x257cf04>) on line #10 of app/views/items/index.html.erb:
+7: <% @items.each do |items| %>
+8:   <tr>
+9:     <td><%= link_to 'Show', items %></td>
+10: <!--	<td><%= link_to 'Edit', edit_items_path(items) %></td>
+11:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+12: -->
+13:   </tr>
+
+    app/views/items/index.html.erb:10
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (45.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:02:17) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x2669e58>) on line #12 of app/views/items/index.html.erb:
+9:     <td><%= link_to 'Show', items %></td>
+10: 
+11: <!--
+12: 	<td><%= link_to 'Edit', edit_items_path(items) %></td>
+13:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+14: -->
+15:   </tr>
+
+    app/views/items/index.html.erb:12
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:02:17) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (1.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x27658d4>) on line #12 of app/views/items/index.html.erb:
+9:     <td><%= link_to 'Show', items %></td>
+10: 
+11: <!--
+12: 	<td><%= link_to 'Edit', edit_items_path(items) %></td>
+13:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+14: -->
+15:   </tr>
+
+    app/views/items/index.html.erb:12
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:02:19) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `edit_items_path' for #<ActionView::Base:0x25ec05c>) on line #12 of app/views/items/index.html.erb:
+9:     <td><%= link_to 'Show', items %></td>
+10: 
+11: <!--
+12: 	<td><%= link_to 'Edit', edit_items_path(items) %></td>
+13:     <td><%= link_to 'Destroy', items, :confirm => 'Are you sure?', :method => :delete %></td>
+14: -->
+15:   </tr>
+
+    app/views/items/index.html.erb:12
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (110.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:02:35) [GET]
+  [4;36;1mList Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 21ms (View: 7, DB: 5) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:02:38) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:21:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:03:00) [GET]
+  [4;36;1mList Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 18ms (View: 4, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:04:31) [GET]
+  [4;36;1mList Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 20ms (View: 6, DB: 5) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:04:33) [GET]
+  Parameters: {"APTANA_NOCACHE_1249203873587"=>"1249203873587"}
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 77ms (View: 4, DB: 3) | 200 OK [http://0.0.0.0/items?APTANA_NOCACHE_1249203873587=1249203873587]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:04:48) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 23ms (View: 7, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:05:23) [GET]
+  [4;36;1mList Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 21ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:06:05) [GET]
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Items) on line #7 of app/views/items/index.html.erb:
+4:   <tr>
+5:   </tr>
+6: 
+7: <% for @item in Items %>
+8:   <tr>
+9:     <td>author</td>
+10:     	<td>h item.text</td>
+
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:06:11) [GET]
+  Parameters: {"APTANA_NOCACHE_1249203971168"=>"1249203971168"}
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Items) on line #7 of app/views/items/index.html.erb:
+4:   <tr>
+5:   </tr>
+6: 
+7: <% for @item in Items %>
+8:   <tr>
+9:     <td>author</td>
+10:     	<td>h item.text</td>
+
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:06:19) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.7ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `items' for #<ActionView::Base:0x26a618c>) on line #7 of app/views/items/index.html.erb:
+4:   <tr>
+5:   </tr>
+6: 
+7: <% for @item in items %>
+8:   <tr>
+9:     <td>author</td>
+10:     	<td>h item.text</td>
+
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (41.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:06:26) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `item' for #<ActionView::Base:0x2548e0c>) on line #7 of app/views/items/index.html.erb:
+4:   <tr>
+5:   </tr>
+6: 
+7: <% for @item in item %>
+8:   <tr>
+9:     <td>author</td>
+10:     	<td>h item.text</td>
+
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:06:31) [GET]
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mSQL (14.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined method `each' for #<Class:0x263e398>) on line #7 of app/views/items/index.html.erb:
+4:   <tr>
+5:   </tr>
+6: 
+7: <% for @item in Item %>
+8:   <tr>
+9:     <td>author</td>
+10:     	<td>h item.text</td>
+
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (111.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:07:07) [GET]
+  [4;36;1mList Columns (41.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `items' for #<ActionView::Base:0x2765780>) on line #11 of app/views/items/index.html.erb:
+8:   <tr>
+9:     <td>author</td>
+10:     	<td>h item.text</td>
+11: 	<td><%= link_to 'Show', items %></td>
+12: 
+13:   </tr>
+14: <% end %>
+
+    app/views/items/index.html.erb:11
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (47.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:07:47) [GET]
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `items' for #<ActionView::Base:0x25e5748>) on line #11 of app/views/items/index.html.erb:
+8:   <tr>
+9:     <td>item.author</td>
+10:     	<td>h item.text</td>
+11: 	<td><%= link_to 'Show', items %></td>
+12: 
+13:   </tr>
+14: <% end %>
+
+    app/views/items/index.html.erb:11
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (109.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:08:00) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.8ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `items' for #<ActionView::Base:0x26d8a9c>) on line #11 of app/views/items/index.html.erb:
+8:   <tr>
+9:     <td>h item.author</td>
+10:     <td>h item.text</td>
+11: 	<td><%= link_to 'Show', items %></td>
+12: 
+13:   </tr>
+14: <% end %>
+
+    app/views/items/index.html.erb:11
+    app/views/items/index.html.erb:7
+    app/controllers/items_controller.rb:12:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (45.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:08:25) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `items' for #<ActionView::Base:0x171e28c>) on line #11 of app/views/items/index.html.erb:
+8:   <tr>
+9:     <td>h item.author</td>
+10:     <td>h item.text</td>
+11: 	<td><%= link_to 'Show', items %></td>
+12: 
+13:   </tr>
+14: <% end %>
+
+    app/views/items/index.html.erb:11
+    app/views/items/index.html.erb:7
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:09:37) [GET]
+  [4;36;1mList Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (1.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 18ms (View: 5, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:09:56) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.8ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:11:05) [GET]
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+ERROR: compiling _run_erb_app47views47items47index46html46erb RAISED compile error
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:15: unknown regexp options - tr
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:16: syntax error, unexpected '<'
+<% end ).to_s); @output_buffer.concat "\n"
+ ^
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:22: syntax error, unexpected kENSURE, expecting kEND
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:24: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47items47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( @list.name).to_s); @output_buffer.concat "\n"
+@output_buffer.concat(( @items.length).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h1>Listing items</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ for item in @items ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( item.author</td>
+
+  </tr>
+<% end ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<!-- "; @output_buffer.concat(( link_to 'New items', new_items_path ).to_s); @output_buffer.concat " -->"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/isaac/repo/twitterous/app/views/items/index.html.erb:24:in `compile!'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:61:in `compile'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:28:in `render'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:941:in `render_without_benchmark'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1322:in `default_render'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1328:in `perform_action_without_filters'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+/Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+/Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:15: unknown regexp options - tr
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:16: syntax error, unexpected '<'
+<% end ).to_s); @output_buffer.concat "\n"
+ ^
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:22: syntax error, unexpected kENSURE, expecting kEND
+/Users/isaac/repo/twitterous/app/views/items/index.html.erb:24: syntax error, unexpected $end, expecting kEND) on line #15 of app/views/items/index.html.erb:
+12:   <tr>
+13:     <td><%= item.author</td>
+14: 
+15:   </tr>
+16: <% end %>
+17: </table>
+18: 
+
+    app/views/items/index.html.erb:24:in `compile!'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:11:24) [GET]
+  [4;35;1mList Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (1.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_items_path' for #<ActionView::Base:0x2742e10>) on line #21 of app/views/items/index.html.erb:
+18: 
+19: <br />
+20: 
+21: <!-- <%= link_to 'New items', new_items_path %> -->
+
+    app/views/items/index.html.erb:21
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:11:33) [GET]
+  [4;35;1mList Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.8ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 21ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:13:13) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+
+NameError (uninitialized constant ItemsController::Items):
+  app/controllers/items_controller.rb:10:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (75.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:13:29) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 39ms (View: 12, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:14:52) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:14:53) [GET]
+  Parameters: {"APTANA_NOCACHE_1249204493828"=>"1249204493828"}
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.9ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 15ms (View: 4, DB: 4) | 200 OK [http://0.0.0.0/items?APTANA_NOCACHE_1249204493828=1249204493828]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:15:38) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_items_path' for #<ActionView::Base:0x271670c>) on line #23 of app/views/items/index.html.erb:
+20: 
+21: <br />
+22: 
+23: <%= link_to 'New items', new_items_path %>
+
+    app/views/items/index.html.erb:23
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:15:42) [GET]
+  [4;36;1mList Columns (10.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.9ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActionView::TemplateError (undefined local variable or method `new_items_path' for #<ActionView::Base:0x25a240c>) on line #23 of app/views/items/index.html.erb:
+20: 
+21: <br />
+22: 
+23: <%= link_to 'New items', new_items_path %>
+
+    app/views/items/index.html.erb:23
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (98.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:17:40) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Completed in 22ms (View: 7, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:17:42) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:34:in `new'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:18:28) [GET]
+  [4;36;1mList Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/items/new.html.erb:
+1: <h1>New items</h1>
+2: 
+3: <% form_for(@items) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/items/new.html.erb:3
+    app/controllers/items_controller.rb:39:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (108.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:22:46) [GET]
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/items/new.html.erb:
+1: <h1>New items</h1>
+2: 
+3: <% form_for(@items) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/items/new.html.erb:3
+    app/controllers/items_controller.rb:39:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:23:06) [GET]
+  [4;36;1mList Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/items/new.html.erb:
+1: <h1>New items</h1>
+2: 
+3: <% form_for(@items) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/items/new.html.erb:3
+    app/controllers/items_controller.rb:39:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:25:20) [GET]
+  [4;35;1mList Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 23ms (View: 8, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:26:07) [GET]
+  [4;35;1mList Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/items/new.html.erb:
+1: <h1>New items</h1>
+2: 
+3: <% form_for(@items) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/items/new.html.erb:3
+    app/controllers/items_controller.rb:39:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (110.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:27:44) [GET]
+  [4;36;1mList Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.8ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 138ms (View: 122, DB: 4) | 200 OK [http://0.0.0.0/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:28:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6pzH6Zw+hagx3dq0DNvU4+mvIO+7CRlOHF44wCCO5pY=", "item"=>{"list"=>"#<List:0x2687d54>", "text"=>"hello", "author"=>"@crandall", "fullMessage"=>"hello ladf", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:58:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:28:55) [GET]
+  Parameters: {"APTANA_NOCACHE_1249205335338"=>"1249205335338"}
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 18ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/items/new?APTANA_NOCACHE_1249205335338=1249205335338]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:28:56) [GET]
+  [4;36;1mList Columns (4.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (1.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 28ms (View: 6, DB: 8) | 200 OK [http://0.0.0.0/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:29:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6pzH6Zw+hagx3dq0DNvU4+mvIO+7CRlOHF44wCCO5pY=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blaahah", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:58:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 18:30:07) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 26ms (View: 13, DB: 2) | 200 OK [http://0.0.0.0/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#new (for 127.0.0.1 at 2009-08-02 18:30:12) [GET]
+  [4;36;1mList Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/new
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/lists/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#create (for 127.0.0.1 at 2009-08-02 18:30:22) [POST]
+  Parameters: {"list"=>{"name"=>"Songs", "permission"=>"public", "owner"=>"@crandall"}, "commit"=>"Create", "authenticity_token"=>"6pzH6Zw+hagx3dq0DNvU4+mvIO+7CRlOHF44wCCO5pY="}
+  [4;35;1mList Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mList Create (0.3ms)[0m   [0mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('Songs', '2009-08-02 09:30:22', 'public', '@crandall', '2009-08-02 09:30:22')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/lists/3
+Completed in 19ms (DB: 3) | 302 Found [http://0.0.0.0/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-02 18:30:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mList Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 3) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://0.0.0.0/lists/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:30:36) [GET]
+  [4;35;1mList Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 29ms (View: 14, DB: 5) | 200 OK [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:30:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6pzH6Zw+hagx3dq0DNvU4+mvIO+7CRlOHF44wCCO5pY=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blaahah", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:58:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:30:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6pzH6Zw+hagx3dq0DNvU4+mvIO+7CRlOHF44wCCO5pY=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blaahah", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:58:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (78.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:31:28) [GET]
+  Parameters: {"APTANA_NOCACHE_1249205488057"=>"1249205488057"}
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 128ms (View: 100, DB: 3) | 200 OK [http://0.0.0.0/items/new?APTANA_NOCACHE_1249205488057=1249205488057]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:31:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ECKwXL5zNL6RiEXa3oMG7Z0Mscq+myCId2gYTp7xqC8=", "item"=>{"list"=>"1", "text"=>"bhal", "author"=>"@crandall", "fullMessage"=>"faldfj", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:58:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-02 18:33:05) [GET]
+  Parameters: {"APTANA_NOCACHE_1249205584931"=>"1249205584931"}
+
+SyntaxError (/Users/isaac/repo/twitterous/app/controllers/items_controller.rb:58: syntax error, unexpected '(', expecting ')'
+     @list = List.find( params[:item] ( params[:list] ))
+                                       ^
+/Users/isaac/repo/twitterous/app/controllers/items_controller.rb:58: syntax error, unexpected ')', expecting kEND
+     @list = List.find( params[:item] ( params[:list] ))
+                                                       ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (68.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-08-02 18:33:09) [GET]
+  Parameters: {"APTANA_NOCACHE_1249205589871"=>"1249205589871"}
+
+SyntaxError (/Users/isaac/repo/twitterous/app/controllers/items_controller.rb:58: syntax error, unexpected '(', expecting ')'
+     @list = List.find( params[:item] ( params[:list] ))
+                                       ^
+/Users/isaac/repo/twitterous/app/controllers/items_controller.rb:58: syntax error, unexpected ')', expecting kEND
+     @list = List.find( params[:item] ( params[:list] ))
+                                                       ^):
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (29.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:34:02) [GET]
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 128ms (View: 99, DB: 4) | 200 OK [http://0.0.0.0/items/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:34:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"6pzH6Zw+hagx3dq0DNvU4+mvIO+7CRlOHF44wCCO5pY=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blahass", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20421910) expected, got String(#113650)):
+  app/controllers/items_controller.rb:59:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:37:04) [GET]
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 151ms (View: 141, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:37:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blahblah", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+  [4;35;1mList Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20530690) expected, got String(#113650)):
+  app/controllers/items_controller.rb:60:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:38:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blahblah", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:59:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (77.2ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:39:12) [GET]
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 112ms (View: 103, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:39:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"list"=>"1", "text"=>"blah", "author"=>"@crandall", "fullMessage"=>"blaha", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+
+NoMethodError (undefined method `items' for "1":String):
+  app/controllers/items_controller.rb:61:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:40:18) [GET]
+  [4;36;1mItem Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 112ms (View: 102, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:40:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"list"=>"1", "text"=>"lbah", "author"=>"@crandall", "fullMessage"=>"blaa", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+
+ActiveRecord::AssociationTypeMismatch (List(#20551110) expected, got String(#113650)):
+  app/controllers/items_controller.rb:60:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:40:40) [GET]
+  Parameters: {"APTANA_NOCACHE_1249206040047"=>"1249206040047"}
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 35ms (View: 29, DB: 2) | 200 OK [http://0.0.0.0/items/new?APTANA_NOCACHE_1249206040047=1249206040047]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:40:42) [GET]
+  [4;35;1mItem Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:42:09) [GET]
+  [4;36;1mItem Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 279ms (View: 115, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:42:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"text"=>"blah", "author"=>"@crandall", "list_id"=>"1", "fullMessage"=>"blah", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-02 09:42:18', 'blah', '@crandall', 'blah', 1, '2009-08-02', '2009-08-02 09:42:18')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/items_controller.rb:66:in `create'
+  app/controllers/items_controller.rb:63:in `create'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:42:27) [GET]
+  Parameters: {"APTANA_NOCACHE_1249206147240"=>"1249206147240"}
+  [4;35;1mItem Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 13ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/items/new?APTANA_NOCACHE_1249206147240=1249206147240]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:43:19) [GET]
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 112ms (View: 103, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 18:43:26) [GET]
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Completed in 32ms (View: 15, DB: 2) | 200 OK [http://0.0.0.0/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:43:32) [GET]
+  [4;35;1mList Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 30ms (View: 8, DB: 5) | 200 OK [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:44:05) [GET]
+  [4;35;1mList Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 22ms (View: 8, DB: 5) | 200 OK [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:44:09) [GET]
+  Parameters: {"APTANA_NOCACHE_1249206249382"=>"1249206249382"}
+  [4;35;1mList Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.8ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 17ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/items?APTANA_NOCACHE_1249206249382=1249206249382]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:44:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"text"=>"yes", "author"=>"@hyfen", "list_id"=>"1", "fullMessage"=>"indeed", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.5ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-02 09:44:34', 'yes', '@hyfen', 'indeed', 1, '2009-08-02', '2009-08-02 09:44:34')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/items/3
+Completed in 17ms (DB: 5) | 302 Found [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:44:34) [GET]
+  Parameters: {"id"=>"3"}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:21:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (99.3ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:44:49) [GET]
+  Parameters: {"APTANA_NOCACHE_1249206289255"=>"1249206289255"}
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.7ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://0.0.0.0/items?APTANA_NOCACHE_1249206289255=1249206289255]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-02 18:45:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mList Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 2) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 13ms (View: 5, DB: 3) | 200 OK [http://0.0.0.0/lists/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:46:54) [GET]
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 19ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:47:35) [GET]
+  [4;35;1mList Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 18ms (View: 8, DB: 4) | 200 OK [http://0.0.0.0/items]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#new (for 127.0.0.1 at 2009-08-02 18:47:37) [GET]
+  [4;36;1mItem Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Rendering template within layouts/items
+Rendering items/new
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/items/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#create (for 127.0.0.1 at 2009-08-02 18:47:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7DKBta7/ObFrYojNi9TEptKvp9fxltUdZdeGDEtWDh0=", "item"=>{"text"=>"3", "author"=>"@hyfen", "list_id"=>"1", "fullMessage"=>"3rff", "submitted(1i)"=>"2009", "submitted(2i)"=>"8", "submitted(3i)"=>"2"}}
+  [4;35;1mList Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-02 09:47:51', '3', '@hyfen', '3rff', 1, '2009-08-02', '2009-08-02 09:47:51')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/items/4
+Completed in 16ms (DB: 5) | 302 Found [http://0.0.0.0/items]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:47:51) [GET]
+  Parameters: {"id"=>"4"}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:21:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:49:32) [GET]
+  Parameters: {"id"=>"show", "APTANA_NOCACHE_1249206572431"=>"1249206572431"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/items_controller.rb:24:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (77.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-02 18:49:37) [GET]
+  Parameters: {"APTANA_NOCACHE_1249206577318"=>"1249206577318", "id"=>"show"}
+  [4;36;1mList Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find List with ID=show):
+  app/controllers/lists_controller.rb:16:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-02 18:49:55) [GET]
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-02 18:49:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/lists/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-02 18:50:01) [GET]
+
+ActionController::RoutingError (No route matches "/item/1" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:50:07) [GET]
+  Parameters: {"id"=>"1"}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/items_controller.rb:24:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (94.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:51:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/show
+
+ActionView::TemplateError (edit_item_url failed to generate from {:action=>"edit", :controller=>"items", :id=>nil}, expected: {:action=>"edit", :controller=>"items"}, diff: {:id=>nil}) on line #2 of app/views/items/show.html.erb:
+1: 
+2: <%= link_to 'Edit', edit_item_path(@items) %> |
+3: <%= link_to 'Back', item_path %>
+
+    (eval):16:in `edit_item_path'
+    app/views/items/show.html.erb:2
+    app/controllers/items_controller.rb:28:in `show'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.9ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#show (for 127.0.0.1 at 2009-08-02 18:51:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/lists
+Rendering lists/show
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/lists/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:53:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/show
+Completed in 13ms (View: 6, DB: 3) | 200 OK [http://localhost/items/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2009-08-02 18:53:19) [GET]
+  Parameters: {"id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  app/controllers/items_controller.rb:51:in `edit'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (35.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2009-08-02 18:55:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.8ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/items/edit.html.erb:
+1: <h1>Editing items</h1>
+2: 
+3: <% form_for(@items) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/items/edit.html.erb:3
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2009-08-02 18:56:52) [GET]
+  Parameters: {"id"=>"edit"}
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Item with ID=edit):
+  app/controllers/items_controller.rb:23:in `show'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (90.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2009-08-02 18:57:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.6ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/edit
+Completed in 15ms (View: 8, DB: 3) | 200 OK [http://localhost/items/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2009-08-02 18:57:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/edit
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://localhost/items/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2009-08-02 18:57:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/edit
+Completed in 10ms (View: 3, DB: 2) | 200 OK [http://localhost/items/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 18:57:36) [GET]
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 96ms (View: 11, DB: 4) | 200 OK [http://localhost/items]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2009-08-02 23:47:38) [GET]
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Rendering template within layouts/items
+Rendering items/index
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 1) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`id` = 1) [0m
+Completed in 157ms (View: 95, DB: 4) | 200 OK [http://0.0.0.0/items]
