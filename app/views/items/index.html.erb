@@ -1,4 +1,7 @@
-<%= @list.name%>
+<% if @list %>
+	<%= @list.name%>
+<%end%>
+
 <%= @items.length%>
 
 
@@ -15,6 +18,9 @@
 	<td><%= item.fullMessage %></td>
 	<td><%= item.submitted %></td>
   	<td><%= item.list.name %></td>
+	<td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

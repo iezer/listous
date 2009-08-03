@@ -5,10 +5,19 @@ class ItemsController < ApplicationController
     #print "hello"
     #print params
     #@list = List.find(params[:list_id])
-    @list = List.find(1)
-    @items = @list.items 
+   # @list = List.find(1)
+    #@items = @list.items 
     #@items = Item.all
-
+    @list
+    @items
+    if params[:id]
+      @list = List.find( params[:id] )
+      @items = @list.items
+    else
+      @items = Item.all
+    end
+    
+     
    # respond_to do |format|
    #   format.html # index.html.erb
    #   format.xml  { render :xml => @items }
@@ -78,10 +87,10 @@ class ItemsController < ApplicationController
   # PUT /items/1
   # PUT /items/1.xml
   def update
-     @list = List.find(params[:list_id])
-     @item = Item.find(params[:id]) 
+     @list = List.find( params[:item] [:list_id] )
      
-    #@items = Items.find(params[:id])
+     
+     @items = Item.find(params[:id])
 
     respond_to do |format|
       if @items.update_attributes(params[:items])

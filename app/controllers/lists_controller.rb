@@ -10,6 +10,13 @@ class ListsController < ApplicationController
     end
   end
 
+  def user
+    @user = params[:id]
+    @lists = List.find(:all, :conditions => { :owner => @user } )
+ 
+    #@lists = List.find("owner")
+  end
+  
   # GET /lists/1
   # GET /lists/1.xml
   def show
