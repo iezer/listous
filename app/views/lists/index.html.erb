@@ -1,4 +1,30 @@
-<h1>Listing lists</h1>
+<h1>Listous</h1>
+<p>Welcome to Listous. Start twittering @listous to create lists.</p>
+<h2>Instructions</h2>
+<p>
+	Use a direct message to create a list. For exampe, <B>D listous books The Tipping Point</B> will create a list 
+	under your name called <b>books</b>, and the first entry will be <b>The Tipping Point</b>
+</p>
+<p>
+	You can also use a reply. For example, <B>@listous books The Tipping Point</B>. Make sure @listous appears
+	at the beginning or the message won`t get parsed.
+</p>
+
+<p>
+	Finally, you can edit your friends' lists. This the exciting part, where the social aspect comes in. 
+	Say your friend <b>@isaacezer</b> is hosting a party and you want indicate what they'll bring.
+	<b>@listous @isaacezer party beer</b> or <b>D listous @isaacezer party beer</b> Will add an entry
+	<b>beer</b> to <b>@isaacezer</b>'s list called <b>party.</b>
+
+</p>
+<h2>People who are using Listous</h2>
+<ul>
+	<% @owners.each do |owner| %>
+		<li>
+			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+		</li>
+	<% end %>
+</ul>
 
 <table>
   <tr>

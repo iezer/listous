@@ -1,0 +1,8 @@
+<h1>People who are using Listous</h1>
+<ul>
+	<% @owners.each do |owner| %>
+		<li>
+			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+		</li>
+	<% end %>
+</ul>

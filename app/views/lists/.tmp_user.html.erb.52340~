@@ -1,0 +1,17 @@
+<h1>Listing lists for <%=h @user %></h1>
+<% @lists.each do |list| %>
+<h2><%=h list.name %></h2>
+<ul>
+    <% list.items.each do |item| %>
+    <li>
+        <%=h item.author %>
+        <br>
+        <%=h item.text %>
+        <br>
+        <%=h item.submitted %>
+        <br>
+    </li>
+    <% end %>
+</ul>
+<% end %>
+

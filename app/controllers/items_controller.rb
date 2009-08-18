@@ -12,6 +12,8 @@ class ItemsController < ApplicationController
     @items
     if params[:id]
       @list = List.find( params[:id] )
+      #@list = List.find( :all, :name => params[:id] )
+
       @items = @list.items
     else
       @items = Item.all
@@ -29,7 +31,7 @@ class ItemsController < ApplicationController
   def show
    # @list = List.find(params[:list_id])
    # @items = @list.items.find(params[:id]) 
-    @item = Item.find (params[:id])
+    @item = Item.find( params[:id] )
   #   @list = List.find( params[:item] [:list_id] )
     # @item = @list.items.build(params[:item])  
     # @items = Items.all
@@ -68,7 +70,27 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.xml
   def create
-     @list = List.find( params[:item] [:list_id] )
+    
+     list_name =  params[:item] [:list_id]
+     author =     params[:item] [:author]
+     list_owner = params[:item] [:list_owner]
+     if not list_owner
+       list_owner = author
+     end
+     
+     @list = List.find( :first, 
+                        :conditions => { :name => list_name,
+                                         :owner => list_owner } )
+                                         
+     #@list = List.find( params[:item] [:list_id] )
+     
+     if not @list
+       @list = List.new({ "owner"       => params[:item] [:author],
+                          "name"        => list_name,
+                          "permission"  => "public" } )
+       @list.save #TODO error handling here like in list create method
+     end
+     
      @item = @list.items.build(params[:item]) 
     #@items = Items.new(params[:items])
 

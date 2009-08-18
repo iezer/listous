@@ -3,7 +3,17 @@ class ListsController < ApplicationController
   # GET /lists.xml
   def index
     @lists = List.all
-
+    
+    @owners = Array.new  
+    List.all.each do |list|
+      puts(list.owner)
+      @owners.push(list.owner)
+    end
+    
+    @owners = @owners.sort
+    @owners = @owners.uniq
+    
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @lists }
@@ -15,6 +25,17 @@ class ListsController < ApplicationController
     @lists = List.find(:all, :conditions => { :owner => @user } )
  
     #@lists = List.find("owner")
+  end
+  
+  def owners
+    @owners = Array.new  
+    List.all.each do |list|
+      puts(list.owner)
+      @owners.push(list.owner)
+    end
+    
+    @owners = @owners.sort
+    @owners = @owners.uniq
   end
   
   # GET /lists/1
@@ -89,4 +110,5 @@ class ListsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
 end

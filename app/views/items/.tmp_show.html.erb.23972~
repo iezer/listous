@@ -1,0 +1,32 @@
+<p>
+  <b>Id:</b>
+  <%=h @item.id %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%=h @item.author %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @item.text %>
+</p>
+
+<p>
+  <b>Full Message:</b>
+  <%=h @item.fullMessage %>
+</p>
+
+<p>
+  <b>List:</b>
+  <%=h @item.list.name %>
+</p>
+
+<p>
+  <b>Submitted:</b>
+  <%=h @item.submitted %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

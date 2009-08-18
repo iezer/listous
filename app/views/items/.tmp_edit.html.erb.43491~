@@ -1,9 +1,8 @@
+<h1>Editing items</h1>
 
-<h1>New item</h1>
- 
 <% form_for(@item) do |f| %>
   <%= f.error_messages %>
- 
+
   <p>
     <%= f.label :author %><br />
     <%= f.text_field :author %>
@@ -18,15 +17,17 @@
   </p>
   <p>
     <%= f.label :submitted %><br />
-    <%= f.datetime_select :submitted %>
+    <%= f.date_select :submitted %>
   </p>
   <p>
     <%= f.label :list_id %><br />
     <%= f.text_field :list_id %>
   </p>
+  
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Update' %>
   </p>
 <% end %>
- 
+
+<%= link_to 'Show', @items %> |
 <%= link_to 'Back', items_path %>
