@@ -2,10 +2,18 @@
 #require File.join(File.dirname(__FILE__), 'helpers', 'config_store')
 #require 'pp'
 
+#ENV['RAILS_ENV'] = 'production'
+
+#ENV['GEM_PATH'] = File.expand_path('~/.gems') + ':/usr/lib/ruby/gems/1.8'
+#require '/home/ezer/.gems/gems/oauth-0.3.5/lib/oauth.rb'
+#require '/home/ezer/.gems/gems/twitter-0.6.15/lib/twitter.rb'
+
 require 'pp'
 require 'rubygems'
 gem 'twitter'
 require 'twitter' 
+
+
 
 #config = ConfigStore.new("#{ENV['HOME']}/.twitter")
 #httpauth = Twitter::HTTPAuth.new(config['email'], config['password'])

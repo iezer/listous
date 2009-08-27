@@ -1,8 +1,10 @@
+<% title = "Listous: Social Lists with Twitter" %>
+
 <h1>Listous</h1>
-<p>Welcome to Listous. Start twittering @listous to create lists.</p>
+<p>Welcome to <b>Listous</b>. Start twittering <b>@listous</b> to create lists.</p>
 <h2>Instructions</h2>
 <p>
-	Use a direct message to create a list. For exampe, <B>D listous books The Tipping Point</B> will create a list 
+	Use a direct message to create a list. For example, <B>D listous books The Tipping Point</B> will create a list 
 	under your name called <b>books</b>, and the first entry will be <b>The Tipping Point</b>
 </p>
 <p>
@@ -12,7 +14,7 @@
 
 <p>
 	Finally, you can edit your friends' lists. This the exciting part, where the social aspect comes in. 
-	Say your friend <b>@isaacezer</b> is hosting a party and you want indicate what they'll bring.
+	Say your friend <b>@isaacezer</b> is hosting a party and you want to say you'll bring some beer.
 	<b>@listous @isaacezer party beer</b> or <b>D listous @isaacezer party beer</b> Will add an entry
 	<b>beer</b> to <b>@isaacezer</b>'s list called <b>party.</b>
 
@@ -26,27 +28,13 @@
 	<% end %>
 </ul>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Owner</th>
-    <th>Permission</th>
-  </tr>
+<h2> Got Some feedback?</h2>
 
-<% @lists.each do |list| %>
-  <tr>
-    <td><%=h list.id %></td>
-	<td><%=h list.name %></td>
-    <td><%=h list.owner %></td>
-    <td><%=h list.permission %></td>
-    <td><%=h list.items.length %></td>
-	<td><%= link_to 'Show', list %></td>
-    <td><%= link_to 'Edit', edit_list_path(list) %></td>
-    <td><%= link_to 'Destroy', list, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+Send it to <b>@listous</b> on twitter!
 
-<br />
+<ul>
+<li>@listous <b>bugs</b> You gotta fix this...</li>
+<li>@listous <b>features</b> It would be great if listous could...</li>
+</ul>
 
-<%= link_to 'New list', new_list_path %>
+Created by <a href="http://www.isaacezer.com">Isaac Ezer</a>.

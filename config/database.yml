@@ -20,9 +20,9 @@ development:
   reconnect: false
   database: twitterous_development
   pool: 5
-  username: root
-  password:
-  host: localhost
+  username: www
+  password: aaaaaa
+  host: mysql.isaacezer.com
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -33,9 +33,9 @@ test:
   reconnect: false
   database: twitterous_test
   pool: 5
-  username: root
-  password:
-  host: localhost
+  username: www
+  password: aaaaaa
+  host: mysql.isaacezer.com
 
 production:
   adapter: mysql
@@ -43,6 +43,6 @@ production:
   reconnect: false
   database: twitterous_production
   pool: 5
-  username: root
-  password: 
-  host: localhost
+  username: www
+  password: aaaaaa
+  host: mysql.isaacezer.com

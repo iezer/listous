@@ -1,9 +1,13 @@
+#require '../helpers/listous.rb'
+include ListsHelper
+
 class ListsController < ApplicationController
   # GET /lists
   # GET /lists.xml
   def index
+    pollTwitter
     @lists = List.all
-    
+ 
     @owners = Array.new  
     List.all.each do |list|
       puts(list.owner)
@@ -21,6 +25,7 @@ class ListsController < ApplicationController
   end
 
   def user
+    pollTwitter
     @user = params[:id]
     @lists = List.find(:all, :conditions => { :owner => @user } )
  

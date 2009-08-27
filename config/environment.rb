@@ -3,8 +3,19 @@
 # Specifies gem version of Rails to use when vendor/rails is not present
 RAILS_GEM_VERSION = '2.3.3' unless defined? RAILS_GEM_VERSION
 
+ENV['RAILS_ENV'] = 'production'
+
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
+
+if ENV['RAILS_ENV'] == 'production'  # don't bother on dev
+  ENV['GEM_PATH'] = '/home/ezer/.gems:/usr/lib/ruby/gems/1.8:/home/ezer/.gems/gems/oauth-0.3.5/lib:/home/ezer/.gems/gems/twitter-0.6.15/lib:.'  # Need this or Passenger fails to start
+  #gem 'twitter'
+  #require 'twitter'
+#  require '/home/ezer/.gems/gems/oauth-0.3.5/lib/oauth.rb'
+#  require '/home/ezer/.gems/gems/twitter-0.6.15/lib/twitter.rb'  # Need this for EACH LOCAL gem you want to use, otherwise it uses the ones in /usr/lib
+end
+
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
@@ -13,12 +24,23 @@ Rails::Initializer.run do |config|
 
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/ruby-hmac-0.3.2/lib )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/oauth-0.3.5/lib )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/oauth-0.3.4/lib )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/mash-0.0.3/lib )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/crack-0.1.4/lib )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/httparty-0.4.3/lib )
+  config.load_paths += %W( #{RAILS_ROOT}/vendor/twitter-0.6.14/lib )
+
+
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  #config.gem "oauth"
+  #config.gem "twitter"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
