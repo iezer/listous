@@ -158,7 +158,7 @@ module ListsHelper
   end
   
   def pollTwitter()
-    httpauth = Twitter::HTTPAuth.new("listous", "G0ingF0rw@rd")
+    httpauth = Twitter::HTTPAuth.new("listous", "")
     base = Twitter::Base.new(httpauth)
     
     #print "User Timeline"

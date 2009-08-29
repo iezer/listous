@@ -44,5 +44,5 @@ production:
   database: twitterous_production
   pool: 5
   username: www
-  password: aaaaaa
+  password: 
   host: mysql.isaacezer.com
