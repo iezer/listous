@@ -3,22 +3,30 @@
 <h1>Listous</h1>
 <p>Welcome to <b>Listous</b>. Start twittering <b>@listous</b> to create lists.</p>
 <h2>Instructions</h2>
-<p>
-	Use a direct message to create a list. For example, <B>D listous books The Tipping Point</B> will create a list 
-	under your name called <b>books</b>, and the first entry will be <b>The Tipping Point</b>
+
+<p>Send a message to Listous to create a new list. That's it. For example:
+<ul>
+	<li>@listous books The Tipping Point</li>
+	<li>D listous books The Tipping Point <i>(NB You can't send Listous a direct message until we follow you. We're working to make this automatic ASAP).</i></li>
+</ul>
+This creates a list called books with the 1st entry "The Tipping Point". Use the same list name again to add to it. 
 </p>
-<p>
-	You can also use a reply. For example, <B>@listous books The Tipping Point</B>. Make sure @listous appears
-	at the beginning or the message won`t get parsed.
+
+<p>You can also add to your friend's lists.
+<ul>
+	<li>@listous @isaacezer books The Tipping Point</li>
+	<li>D listous @isaacezer books The Tipping Point</li>
+</ul>
+
+We think this is the most exciting part as it makes it very easy to collaborate and brainstorm using Twitter.
 </p>
 
 <p>
-	Finally, you can edit your friends' lists. This the exciting part, where the social aspect comes in. 
-	Say your friend <b>@isaacezer</b> is hosting a party and you want to say you'll bring some beer.
-	<b>@listous @isaacezer party beer</b> or <b>D listous @isaacezer party beer</b> Will add an entry
-	<b>beer</b> to <b>@isaacezer</b>'s list called <b>party.</b>
-
+	Imagine your friend <i>@isaacezer</i> is hosting a party and you want to say you'll bring some beer.
+	<i>"@listous @isaacezer party beer"</i> or <i>"D listous @isaacezer party beer"</i> Will add an entry
+	<i>beer</i> to <i>@isaacezer</i>'s list called <i>party.</i>
 </p>
+
 <h2>People who are using Listous</h2>
 <ul>
 	<% @owners.each do |owner| %>
@@ -36,5 +44,6 @@ Send it to <b>@listous</b> on twitter!
 <li>@listous <b>bugs</b> You gotta fix this...</li>
 <li>@listous <b>features</b> It would be great if listous could...</li>
 </ul>
+
 
 Created by <a href="http://www.isaacezer.com">Isaac Ezer</a>.

@@ -10462,3 +10462,1832 @@ Rendering lists/user
   [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
   [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
 Completed in 15ms (View: 8, DB: 3) | 200 OK [http://localhost/lists/user/isaacezer]
+  [4;36;1mSQL (132.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (32.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 04:34:52) [GET]
+
+Twitter::Unauthorized ((401): Unauthorized - Could not authenticate you.):
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:59:in `raise_errors'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:47:in `make_friendly'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:34:in `perform'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:6:in `get'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/base.rb:158:in `perform_get'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/base.rb:57:in `direct_messages'
+  app/helpers/lists_helper.rb:152:in `pollTwitter'
+  app/controllers/lists_controller.rb:8:in `index'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (20.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 04:35:16) [GET]
+  Parameters: {"id"=>"isaacezer"}
+
+Twitter::Unauthorized ((401): Unauthorized - Could not authenticate you.):
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:59:in `raise_errors'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:47:in `make_friendly'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:34:in `perform'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/request.rb:6:in `get'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/base.rb:158:in `perform_get'
+  /Users/isaac/.gem/ruby/1.8/gems/twitter-0.6.13/lib/twitter/base.rb:57:in `direct_messages'
+  app/helpers/lists_helper.rb:152:in `pollTwitter'
+  app/controllers/lists_controller.rb:28:in `user'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (123.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 04:37:54) [GET]
+  [4;36;1mList Load (579.9ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'book' AND `lists`.`owner` = 'hyfen') LIMIT 1[0m
+  [4;36;1mList Columns (252.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mList Create (72.8ms)[0m   [0;1mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('book', '2009-08-28 19:37:56', 'public', 'hyfen', '2009-08-28 19:37:56')[0m
+  [4;35;1mSQL (116.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItem Load (16.0ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'hyfen' AND `items`.`fullMessage` = 'book Barbarians at the Gate: The Fall of RJR Nabisco') LIMIT 1[0m
+  [4;35;1mItem Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (1.2ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:56', 'Barbarians at the Gate: The Fall of RJR Nabisco', 'hyfen', 'book Barbarians at the Gate: The Fall of RJR Nabisco', 22, '2009-08-27', '2009-08-28 19:37:56')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mList Load (24.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'books' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;36;1mItem Load (1.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = 'books A Farewell To Arms') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:56', 'A Farewell To Arms', 'isaacezer', 'books A Farewell To Arms', 18, '2009-08-27', '2009-08-28 19:37:56')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'books' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = 'books The Tipping Point') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:56', 'The Tipping Point', 'isaacezer', 'books The Tipping Point', 18, '2009-08-27', '2009-08-28 19:37:56')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'bugs' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'bugs' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mList Create (3.1ms)[0m   [0;1mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('bugs', '2009-08-28 19:37:56', 'public', 'isaacezer', '2009-08-28 19:37:56')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = 'bugs should be able to create an empty list') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:56', 'should be able to create an empty list', 'isaacezer', 'bugs should be able to create an empty list', 23, '2009-08-27', '2009-08-28 19:37:56')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'books' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = 'books Harry Potter and the Philosopher\'s Stone') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:56', 'Harry Potter and the Philosopher\'s Stone', 'isaacezer', 'books Harry Potter and the Philosopher\'s Stone', 18, '2009-08-26', '2009-08-28 19:37:56')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'books' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = 'books Design Patterns in Ruby') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:56', 'Design Patterns in Ruby', 'isaacezer', 'books Design Patterns in Ruby', 18, '2009-08-26', '2009-08-28 19:37:56')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'blah' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'books' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer_test' AND `items`.`fullMessage` = '@isaacezer books Beautiful Code') LIMIT 1[0m
+  [4;35;1mList Load (0.9ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mList Create (0.2ms)[0m   [0mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('todo', '2009-08-28 19:37:58', 'public', 'esh2chan', '2009-08-28 19:37:58')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mItem Load (0.7ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.2ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:58', 'tell Isaac about idea to use listous as comment system for edomame', 'esh2chan', ' todo tell Isaac about idea to use listous as comment system for edomame', 24, '2009-08-27', '2009-08-28 19:37:58')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'books' AND `lists`.`owner` = 'isaacezer') LIMIT 1[0m
+  [4;36;1mItem Load (1.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' @isaacezer books dreaming in code') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (1.3ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:58', 'dreaming in code', 'esh2chan', ' @isaacezer books dreaming in code', 18, '2009-08-27', '2009-08-28 19:37:58')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mList Create (0.2ms)[0m   [0;1mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('features', '2009-08-28 19:37:58', 'public', 'listous', '2009-08-28 19:37:58')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItem Load (0.6ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'listous' AND `items`.`fullMessage` = ' features Spam protection: only people I follow can add to my list. Requires the user authenticates once so we can check friends') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.3ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:58', 'Spam protection: only people I follow can add to my list. Requires the user authenticates once so we can check friends', 'listous', ' features Spam protection: only people I follow can add to my list. Requires the user authenticates once so we can check friends', 25, '2009-08-26', '2009-08-28 19:37:58')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'bugs' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mList Create (0.3ms)[0m   [0;1mINSERT INTO `lists` (`name`, `updated_at`, `permission`, `owner`, `created_at`) VALUES('bugs', '2009-08-28 19:37:58', 'public', 'listous', '2009-08-28 19:37:58')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'listous' AND `items`.`fullMessage` = ' bugs ...\'s broken!!!') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mItem Create (0.2ms)[0m   [0;1mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:37:58', '...\'s broken!!!', 'listous', ' bugs ...\'s broken!!!', 26, '2009-08-26', '2009-08-28 19:37:58')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 3967ms (View: 137, DB: 1092) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 04:38:46) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mItem Create (0.3ms)[0m   [0mINSERT INTO `items` (`updated_at`, `text`, `author`, `fullMessage`, `list_id`, `submitted`, `created_at`) VALUES('2009-08-28 19:38:47', 'Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away', 'isaacezer', '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away', 25, '2009-08-27', '2009-08-28 19:38:47')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mList Load (1.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'book' AND `lists`.`owner` = 'hyfen') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'hyfen' AND `items`.`fullMessage` = 'book Barbarians at the Gate: The Fall of RJR Nabisco') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 1959ms (View: 9, DB: 9) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 04:38:55) [GET]
+  Parameters: {"id"=>"hyfen"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'hyfen') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.5ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 22) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 1112ms (View: 6, DB: 5) | 200 OK [http://0.0.0.0/lists/user/hyfen]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 04:38:58) [GET]
+  Parameters: {"id"=>"isaacezer_test"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer_test') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (16.3ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (16.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 21) [0m
+  [4;36;1mItem Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 758ms (View: 7, DB: 36) | 200 OK [http://0.0.0.0/lists/user/isaacezer_test]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 04:39:01) [GET]
+  Parameters: {"id"=>"listous"}
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'listous') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 25) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 26) [0m
+Completed in 2162ms (View: 7, DB: 5) | 200 OK [http://0.0.0.0/lists/user/listous]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:17:49) [GET]
+  [4;36;1mList Load (0.5ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 1212ms (View: 129, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:17:57) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:18:21) [GET]
+  Parameters: {"list"=>"books", "id"=>"isaacezer"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;36;1mItem Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 1553ms (View: 68, DB: 6) | 200 OK [http://0.0.0.0/lists/user/isaacezer?list=books]
+/!\ FAILSAFE /!\  Sat Aug 29 11:22:22 +0900 2009
+  Status: 500 Internal Server Error
+  Illegal route: the :controller must be specified!
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/builder.rb:175:in `build'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:309:in `add_route'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:19:in `connect'
+    /Users/isaac/repo/twitterous/twitterous/config/routes.rb:8
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:226:in `draw'
+    /Users/isaac/repo/twitterous/twitterous/config/routes.rb:1
+    /Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:145:in `load_without_new_constant_marking'
+    /Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:145:in `load'
+    /Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:145:in `load'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:286:in `each'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:286:in `load_routes!'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:266:in `load!'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:281:in `reload'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:59:in `reload_application'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:28:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /Users/isaac/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/isaac/repo/twitterous/twitterous/script/server:3
+    -e:2:in `load'
+    -e:2
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:22:24) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:22:52) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:25:34) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:25:36) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:28:37) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:28:40) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:28:52) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:28:53) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:28:55) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:29:50) [GET]
+  Parameters: {"user"=>"user", "lists"=>"lists", "id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;35;1mList Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 2492ms (View: 197, DB: 6) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:29:57) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:31:31) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer/books" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:31:33) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-08-29 11:35:15) [GET]
+
+ActionController::RoutingError (No route matches "/lists/user/isaacezer" with {:method=>:get}):
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:438:in `recognize'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:433:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:35:44) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.1ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+
+ActionView::TemplateError (No route matches {:action=>"user", :id=>"esh2chan", :controller=>"lists"}) on line #26 of app/views/lists/index.html.erb:
+23: <ul>
+24: 	<% @owners.each do |owner| %>
+25: 		<li>
+26: 			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+27: 		</li>
+28: 	<% end %>
+29: </ul>
+
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:416:in `generate'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:205:in `rewrite_path'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:184:in `rewrite_url'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:162:in `rewrite'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:629:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/lists/index.html.erb:26
+    app/views/lists/index.html.erb:24:in `each'
+    app/views/lists/index.html.erb:24
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:301:in `with_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:30:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:947:in `render_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `each'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/lists_controller.rb:21:in `index'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:35:53) [GET]
+
+ArgumentError (A copy of ListsHelper has been removed from the module tree but is still active!):
+  /Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:414:in `load_missing_constant'
+  /Users/isaac/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+  app/helpers/lists_helper.rb:104:in `parseTweets'
+  app/helpers/lists_helper.rb:39:in `each'
+  app/helpers/lists_helper.rb:39:in `parseTweets'
+  app/helpers/lists_helper.rb:152:in `pollTwitter'
+  app/controllers/lists_controller.rb:8:in `index'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:36:08) [GET]
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.1ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+
+ActionView::TemplateError (No route matches {:action=>"user", :id=>"esh2chan", :controller=>"lists"}) on line #26 of app/views/lists/index.html.erb:
+23: <ul>
+24: 	<% @owners.each do |owner| %>
+25: 		<li>
+26: 			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+27: 		</li>
+28: 	<% end %>
+29: </ul>
+
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:416:in `generate'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:205:in `rewrite_path'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:184:in `rewrite_url'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:162:in `rewrite'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:629:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/lists/index.html.erb:26
+    app/views/lists/index.html.erb:24:in `each'
+    app/views/lists/index.html.erb:24
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:301:in `with_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:30:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:947:in `render_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `each'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/lists_controller.rb:21:in `index'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:36:35) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+
+ActionView::TemplateError (No route matches {:action=>"user", :id=>"esh2chan", :controller=>"lists"}) on line #26 of app/views/lists/index.html.erb:
+23: <ul>
+24: 	<% @owners.each do |owner| %>
+25: 		<li>
+26: 			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+27: 		</li>
+28: 	<% end %>
+29: </ul>
+
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:416:in `generate'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:205:in `rewrite_path'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:184:in `rewrite_url'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:162:in `rewrite'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:629:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/lists/index.html.erb:26
+    app/views/lists/index.html.erb:24:in `each'
+    app/views/lists/index.html.erb:24
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:301:in `with_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:30:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:947:in `render_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `each'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/lists_controller.rb:21:in `index'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (47.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:36:56) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+
+ActionView::TemplateError (No route matches {:action=>"user", :id=>"esh2chan", :controller=>"lists"}) on line #26 of app/views/lists/index.html.erb:
+23: <ul>
+24: 	<% @owners.each do |owner| %>
+25: 		<li>
+26: 			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+27: 		</li>
+28: 	<% end %>
+29: </ul>
+
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:416:in `generate'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:205:in `rewrite_path'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:184:in `rewrite_url'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/url_rewriter.rb:162:in `rewrite'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:629:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/lists/index.html.erb:26
+    app/views/lists/index.html.erb:24:in `each'
+    app/views/lists/index.html.erb:24
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:34:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:301:in `with_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/renderable.rb:30:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/template.rb:199:in `render_template'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:260:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:343:in `_render_with_layout'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_view/base.rb:257:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1246:in `render_for_file'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:947:in `render_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:135:in `custom'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:179:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `each'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:173:in `respond'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/lists_controller.rb:21:in `index'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (57.3ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-29 11:38:17) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.1ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 1567ms (View: 11, DB: 3) | 200 OK [http://0.0.0.0/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:38:21) [GET]
+  Parameters: {"id"=>"esh2chan"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'esh2chan') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 24) [0m
+  [4;36;1mItem Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 4839ms (View: 18, DB: 6) | 200 OK [http://0.0.0.0/lists/user/esh2chan]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:38:31) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;36;1mItem Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 1282ms (View: 7, DB: 5) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:38:39) [GET]
+  Parameters: {"list"=>"books", "id"=>"isaacezer"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.6ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'list_name' AND `lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+Completed in 2644ms (View: 1, DB: 2) | 200 OK [http://0.0.0.0/lists/user/isaacezer?list=books]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:41:23) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.9ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+
+ArgumentError (too few arguments):
+  app/controllers/lists_controller.rb:38:in `format'
+  app/controllers/lists_controller.rb:38:in `user'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (97.9ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:41:50) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.7ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;36;1mItem Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 1500ms (View: 25, DB: 6) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:42:20) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+
+ArgumentError (too few arguments):
+  app/controllers/lists_controller.rb:37:in `format'
+  app/controllers/lists_controller.rb:37:in `user'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user to xml (for 127.0.0.1 at 2009-08-29 11:43:31) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+
+ArgumentError (too few arguments):
+  app/controllers/lists_controller.rb:38:in `format'
+  app/controllers/lists_controller.rb:38:in `user'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user to xml (for 127.0.0.1 at 2009-08-29 11:43:53) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.7ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (1.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+
+ArgumentError (too few arguments):
+  app/controllers/lists_controller.rb:38:in `format'
+  app/controllers/lists_controller.rb:38:in `user'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (32.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user to xml (for 127.0.0.1 at 2009-08-29 11:45:14) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+  [4;35;1mList Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 1704ms (View: 238, DB: 3) | 200 OK [http://0.0.0.0/lists/user/isaacezer.xml]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:45:26) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+  [4;35;1mList Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 1333ms (View: 5, DB: 3) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:45:32) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+  [4;35;1mList Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 1458ms (View: 6, DB: 4) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-29 11:46:03) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;35;1mList Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;35;1mItem Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `items`[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 983ms (View: 10, DB: 7) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user to xml (for 127.0.0.1 at 2009-08-29 11:46:10) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+  [4;35;1mList Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Completed in 815ms (View: 6, DB: 3) | 200 OK [http://0.0.0.0/lists/user/isaacezer.xml]
+  [4;36;1mSQL (194.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (33.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:01:21) [GET]
+
+NameError (undefined local variable or method `fullMessage' for #<ListsController:0x268d524>):
+  app/helpers/lists_helper.rb:20:in `parseTweet'
+  app/helpers/lists_helper.rb:154:in `parseTweets'
+  app/helpers/lists_helper.rb:129:in `each'
+  app/helpers/lists_helper.rb:129:in `parseTweets'
+  app/helpers/lists_helper.rb:169:in `pollTwitter'
+  app/controllers/lists_controller.rb:8:in `index'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (95.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:02:09) [GET]
+  [4;36;1mList Load (244.5ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (2.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.1ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (108.7ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+
+ActionView::TemplateError (No route matches {:action=>"user", :id=>"esh2chan", :controller=>"lists"}) on line #34 of app/views/lists/index.html.erb:
+31: <ul>
+32: 	<% @owners.each do |owner| %>
+33: 		<li>
+34: 			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+35: 		</li>
+36: 	<% end %>
+37: </ul>
+
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/routing/route_set.rb:416:in `generate'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/url_rewriter.rb:205:in `rewrite_path'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/url_rewriter.rb:184:in `rewrite_url'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/url_rewriter.rb:162:in `rewrite'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:629:in `url_for'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/helpers/url_helper.rb:85:in `send'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/helpers/url_helper.rb:85:in `url_for'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/helpers/url_helper.rb:228:in `link_to'
+    app/views/lists/index.html.erb:34
+    app/views/lists/index.html.erb:32:in `each'
+    app/views/lists/index.html.erb:32
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/renderable.rb:34:in `send'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/renderable.rb:34:in `render'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/base.rb:301:in `with_template'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/renderable.rb:30:in `render'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/template.rb:199:in `render_template'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/base.rb:260:in `render'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/base.rb:343:in `_render_with_layout'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_view/base.rb:257:in `render'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1246:in `render_for_file'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:947:in `render_without_benchmark'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:51:in `render'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:135:in `send'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:135:in `custom'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:179:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:179:in `respond'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:173:in `each'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:173:in `respond'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/lists_controller.rb:21:in `index'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1327:in `send'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:617:in `call_filters'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/flash.rb:146:in `perform_action'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:527:in `send'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:527:in `process_without_filters'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:606:in `process'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:391:in `process'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:386:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/routing/route_set.rb:434:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:88:in `dispatch'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:9:in `cache'
+    /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:28:in `call'
+    /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/params_parser.rb:15:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/reloader.rb:29:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/failsafe.rb:26:in `call'
+    /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/rails/rack/static.rb:31:in `call'
+    /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/commands/server.rb:111
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (121.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:02:38) [GET]
+  [4;35;1mList Load (0.5ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.1ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 2436ms (View: 21, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:03:27) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.3ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 2032ms (View: 10, DB: 4) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:04:16) [GET]
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.1ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 1474ms (View: 7, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:04:38) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 1912ms (View: 7, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:05:10) [GET]
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mList Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 1108ms (View: 7, DB: 4) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 02:05:12) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;36;1mList Load (0.5ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 1774ms (View: 2, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-30 02:05:17) [GET]
+  Parameters: {"id"=>"isaacezer"}
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'features' AND `lists`.`owner` = 'listous') LIMIT 1[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer' AND `items`.`fullMessage` = '@listous features Auto follow-back someone when they follow listous, so that they can start creating lists using DM right away') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'todo' AND `lists`.`owner` = 'esh2chan') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'esh2chan' AND `items`.`fullMessage` = ' todo tell Isaac about idea to use listous as comment system for edomame') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'isaacezer') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 18) [0m
+  [4;36;1mItem Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
+Completed in 1591ms (View: 64, DB: 5) | 200 OK [http://0.0.0.0/lists/user/isaacezer]

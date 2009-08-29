@@ -4,6 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :items
 
   map.resources :lists, :has_many => :items 
+  
+# map.connect ':lists/:user/:id', :controller => 'lists', :action => 'user'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 
