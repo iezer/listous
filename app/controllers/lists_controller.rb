@@ -27,12 +27,12 @@ class ListsController < ApplicationController
   def user
     pollTwitter
     @user = params[:id]
-   # if params[:list] != nil
-     # @list_name = params[:list]
-     # @lists = List.find(:all, :conditions => { :owner => @user, :name => 'list_name' } )
-    #else
+    if params[:list] != nil
+      @list_name = params[:list]
+      @lists = List.find(:all, :conditions => { :owner => @user, :name => @list_name } )
+    else
       @lists = List.find(:all, :conditions => { :owner => @user } )
-   # end
+    end
     #@lists = List.find("owner")
     #format.html { render :action => "user" }
   respond_to do |format|
