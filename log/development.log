@@ -12291,3 +12291,103 @@ Rendering lists/user
   [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 19) [0m
   [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.list_id = 23) [0m
 Completed in 1591ms (View: 64, DB: 5) | 200 OK [http://0.0.0.0/lists/user/isaacezer]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 12:42:20) [GET]
+
+Twitter::Unauthorized ((401): Unauthorized - Could not authenticate you.):
+  /Users/isaac/.gem/ruby/1.twitter (0.6.13) lib/twitter/request.rb:59:in `raise_errors'
+  /Users/isaac/.gem/ruby/1.twitter (0.6.13) lib/twitter/request.rb:47:in `make_friendly'
+  /Users/isaac/.gem/ruby/1.twitter (0.6.13) lib/twitter/request.rb:34:in `perform'
+  /Users/isaac/.gem/ruby/1.twitter (0.6.13) lib/twitter/request.rb:6:in `get'
+  /Users/isaac/.gem/ruby/1.twitter (0.6.13) lib/twitter/base.rb:158:in `perform_get'
+  /Users/isaac/.gem/ruby/1.twitter (0.6.13) lib/twitter/base.rb:57:in `direct_messages'
+  app/helpers/lists_helper.rb:169:in `pollTwitter'
+  app/controllers/lists_controller.rb:8:in `index'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1327:in `send'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:1327:in `perform_action_without_filters'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:617:in `call_filters'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/flash.rb:146:in `perform_action'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:527:in `send'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:527:in `process_without_filters'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/filters.rb:606:in `process'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:391:in `process'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/base.rb:386:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/routing/route_set.rb:434:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:88:in `dispatch'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:111:in `_call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:82:in `initialize'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:9:in `cache'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/query_cache.rb:28:in `call'
+  /Users/isaac/.gem/ruby/1.activerecord (2.3.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/params_parser.rb:15:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/session/cookie_store.rb:93:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/reloader.rb:29:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/failsafe.rb:26:in `call'
+  /Users/isaac/.gem/ruby/1.actionpack (2.3.3) lib/action_controller/dispatcher.rb:106:in `call'
+  /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/rails/rack/static.rb:31:in `call'
+  /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/isaac/.gem/ruby/1.rails (2.3.3) lib/commands/server.rb:111
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2009-08-30 12:42:49) [GET]
+  [4;36;1mList Load (0.4ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = 'music' AND `lists`.`owner` = 'isaacezer_test') LIMIT 1[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer_test' AND `items`.`fullMessage` = 'music Headhunters') LIMIT 1[0m
+  [4;36;1mList Load (0.6ms)[0m   [0;1mSELECT * FROM `lists` WHERE (`lists`.`name` = '2009runs' AND `lists`.`owner` = 'robtyrie') LIMIT 1[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.`author` = 'robtyrie' AND `items`.`fullMessage` = ' 2009Runs NYGH Underwear Run August') LIMIT 1[0m
+  [4;36;1mList Load (0.2ms)[0m   [0;1mSELECT * FROM `lists` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `lists` [0m
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+Rendering template within layouts/lists
+Rendering lists/index
+Completed in 877ms (View: 32, DB: 3) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user (for 127.0.0.1 at 2009-08-30 12:42:56) [GET]
+  Parameters: {"id"=>"esh2chan"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'music' AND `lists`.`owner` = 'isaacezer_test') LIMIT 1[0m
+  [4;36;1mItem Load (0.3ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer_test' AND `items`.`fullMessage` = 'music Headhunters') LIMIT 1[0m
+  [4;35;1mList Load (0.3ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = '2009runs' AND `lists`.`owner` = 'robtyrie') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'robtyrie' AND `items`.`fullMessage` = ' 2009Runs NYGH Underwear Run August') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'esh2chan') [0m
+Rendering template within layouts/lists
+Rendering lists/user
+  [4;36;1mList Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.4ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 24) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 761ms (View: 20, DB: 5) | 200 OK [http://0.0.0.0/lists/user/esh2chan]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ListsController#user to xml (for 127.0.0.1 at 2009-08-30 12:43:00) [GET]
+  Parameters: {"id"=>"esh2chan"}
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = 'music' AND `lists`.`owner` = 'isaacezer_test') LIMIT 1[0m
+  [4;36;1mItem Load (0.4ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'isaacezer_test' AND `items`.`fullMessage` = 'music Headhunters') LIMIT 1[0m
+  [4;35;1mList Load (0.4ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`name` = '2009runs' AND `lists`.`owner` = 'robtyrie') LIMIT 1[0m
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM `items` WHERE (`items`.`author` = 'robtyrie' AND `items`.`fullMessage` = ' 2009Runs NYGH Underwear Run August') LIMIT 1[0m
+  [4;35;1mList Load (0.2ms)[0m   [0mSELECT * FROM `lists` WHERE (`lists`.`owner` = 'esh2chan') [0m
+Rendering lists/user
+  [4;36;1mList Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `lists`[0m
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM `items` WHERE (`items`.list_id = 24) [0m
+  [4;36;1mItem Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `items`[0m
+Completed in 2897ms (View: 60, DB: 5) | 200 OK [http://0.0.0.0/lists/user/esh2chan.xml]

@@ -37,7 +37,8 @@ class ListsController < ApplicationController
     #format.html { render :action => "user" }
   respond_to do |format|
     format.html 
-    format.xml { render :xml => @lists }
+    format.xml
+    #format.xml { render :xml => @lists }
   end
 
   end
