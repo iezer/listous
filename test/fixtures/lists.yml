@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  owner: MyString
-  permission: MyString
+emptylist:
+  name: emptylist
+  owner: isaac
+  permission: public
 
-two:
-  name: MyString
-  owner: MyString
-  permission: MyString
+onelist:
+  name: onelist
+  owner: isaacezer
+  permission: private

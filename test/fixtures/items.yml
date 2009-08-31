@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  author: MyString
-  text: MyString
-  fullMessage: MyString
+  author: isaacezer
+  text: hellp
+  fullMessage: D listous onelist hello
   submitted: 2009-08-01
   list: 
 
