@@ -1,4 +1,4 @@
-<% title "Listous: Social Lists with Twitter" %>
+<% title = "Listous: Social Lists with Twitter" %>
 
 <h1>Listous</h1>
 <p>Welcome to <b>Listous</b>. Start twittering <a href="http://www.twitter.com/listous"><b>@listous</b></a> to create lists.</p>

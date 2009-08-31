@@ -1,4 +1,3 @@
-<% title "Listous: " + @user %>
 <h1>Listous for <a href="http://www.twitter.com/<%=h @user %>">@<%=h @user %></a></h1>
 <% @lists.each do |list| %>
 <h2><%=h list.name %></h2>
