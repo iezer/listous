@@ -5,7 +5,9 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.xml
   def index
-    pollTwitter
+    if ENV['RAILS_ENV'] != 'test'
+      pollTwitter
+    end
     @lists = List.all
  
     @owners = Array.new  
@@ -25,7 +27,9 @@ class ListsController < ApplicationController
   end
 
   def user
-    pollTwitter
+    if ENV['RAILS_ENV'] != 'test'
+      pollTwitter
+    end
     @user = params[:id]
     if params[:list] != nil
       @list_name = params[:list]

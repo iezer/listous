@@ -31,11 +31,11 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: twitterous_test
+  database: listous_test
   pool: 5
-  username: www
-  password: aaaaaa
-  host: mysql.isaacezer.com
+  username: root
+  password: 
+  host: localhost
 
 production:
   adapter: mysql

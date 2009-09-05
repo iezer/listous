@@ -4,11 +4,11 @@
 <h2><%=h list.name %></h2>
 <ul>
     <% list.items.each do |item| %>
+	<% next if item.deleted %>
     <li>
-        <b><%=h item.text %></b> <i><%=h item.author %> <%=h item.submitted %>
-
+        <b><%=h item.text %></b>
+        <i><%=h item.author %><%=h item.submitted %></i>
     </li>
     <% end %>
 </ul>
 <% end %>
-

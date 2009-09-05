@@ -75,4 +75,120 @@ class ListsHelperTest < ActionView::TestCase
                                         :owner => "isaacezer" } )
     assert_nil @list
   end
+
+  def add_duplicate
+    assert false == parseTweet( "isaacezer", "emptylist jazz", "2009-08-01" )
+    assert true  == parseTweet( "isaacezer", "emptylist jazz", "2009-08-01" )
+    
+    @list = List.find( :first, 
+                       :conditions => { :name =>  "music",
+                                        :owner => "isaacezer" } )
+    assert_nil @list
+  end
+  
+  def test_delete
+    assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
+    assert false == parseTweet( "isaacezer", "books Blink", "2009-08-01" )
+
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "books",
+                                    :owner => "isaacezer" } )
+    assert @list.items.size == 2
+
+    assert @item
+    assert false == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
+    @item = @list.items.find( :first,
+               :conditions => { :author => "isaacezer",
+                                :text => "Blink" } )
+
+    assert true == @item.deleted
+  end
+
+  def test_delete_twice
+    assert false == parseTweet( "isaacezer", "books Blink", "2009-08-01" )
+    assert false == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
+    assert true  == @item.deleted
+    assert true  == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
+    assert true  == @item.deleted
+  end
+  
+  def test_delete_not_exist
+    
+  end
+  
+  def test_delete_no_item_text
+    
+  end
+  
+  def test_delete_non_owner
+    assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
+    assert false == parseTweet( "hyfen", "@isaacezer books Blink", "2009-08-01" )
+
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "books",
+                                    :owner => "isaacezer" } )
+    assert @list.items.size == 2
+
+    assert @item
+    assert false == parseTweet( "hyfen", "delete @isaacezer books Blink", "2009-08-01" )
+    @item = @list.items.find( :first,
+               :conditions => { :author => "hyfen",
+                                :text => "Blink" } )
+
+    assert true == @item.deleted
+  end
+
+  def test_delete_non_owner_by_owner
+    assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
+    assert false == parseTweet( "hyfen", "@isaacezer books Blink", "2009-08-01" )
+
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "books",
+                                    :owner => "isaacezer" } )
+    assert @list.items.size == 2
+
+    assert @item
+    assert false == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
+    @item = @list.items.find( :first,
+               :conditions => { :author => "hyfen",
+                                :text => "Blink" } )
+
+    assert true == @item.deleted
+  end
+  
+  def test_delete_non_owner1
+    assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
+    assert false == parseTweet( "isaacezer", "books Blink", "2009-08-01" )
+
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "books",
+                                    :owner => "isaacezer" } )
+    assert @list.items.size == 2
+
+    assert @item
+    assert false == parseTweet( "hyfen", "delete @isaacezer books Blink", "2009-08-01" )
+    @item = @list.items.find( :first,
+               :conditions => { :author => "isaacezer",
+                                :text => "Blink" } )
+
+    assert false == @item.deleted
+  end
+  
+  def test_delete_non_owner2
+    assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
+    assert false == parseTweet( "hyfen", "@isaacezer books Blink", "2009-08-01" )
+
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "books",
+                                    :owner => "isaacezer" } )
+    assert @list.items.size == 2
+
+    assert @item
+    assert false == parseTweet( "esh2chan", "delete @isaacezer books Blink", "2009-08-01" )
+    @item = @list.items.find( :first,
+               :conditions => { :author => "hyfen",
+                                :text => "Blink" } )
+
+    assert false == @item.deleted
+  end
 end

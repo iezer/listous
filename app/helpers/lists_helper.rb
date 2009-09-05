@@ -16,15 +16,84 @@ module ListsHelper
     return list_owners
   end
   
-  def parseTweet( author, fullMessage, submitted )
-    splitter = fullMessage.split( ' ', 3 )
+    #Return true if already processed
+  def delete_tweet( list_name, owner, author, text, submitted )
+    puts "in delete " + author + " " + list_name + " " + text + " " + submitted
+    if list_name[0] == 64 # @ we don't want this in list names
+      puts("Error @ sign in list name. Can't delete someone elses list.")
+      return false
+    end
+
+    #Created a list but no more items
+    if text == ""
+      #Can't delete if no text. use delete_list
+      return false
+    end
     
+    @list = List.find( :first, 
+                       :conditions => { :name =>  list_name,
+                                        :owner => owner } )
+    if not @list
+      #Error can't delete can't find list TODO
+      return false
+    end
+
+    #Check if the item exists, since we assume the messages
+    #come in chronological order, we can just break when
+    #we find something.
+    @item = Item.find( :first,
+                       :conditions => { :author => author,
+                                        :text   => text } ) 
+
+    if @item == nil and owner == author
+      @item = Item.find( :first,
+                         :conditions => { :text   => text } ) 
+    end
+    
+    #Clean up this search by using the submit time and the list name or ID TODO
+    #TODO really need to check submit time to make sure it's the same message
+    if @item
+      if @item.deleted
+        puts "error item already deleted"
+        return true
+      else
+        puts "deleting item"
+        @item.deleted = true
+        @item.save
+        return false
+      end
+    else
+      puts "error can't find item to delete"
+      #Error, can't find the item so don't delete
+    end
+    
+    return false
+  end
+  
+  def parseTweet( author, full_message, submitted )
+    
+    command = "insert"
+    owner = author
+    
+    splitter = full_message.split( ' ', 3 )
     if splitter.size == 0
       return false
-
-    elsif splitter.size == 1
+    end
+    
+    if splitter[0] == "delete"
+      if (splitter.size < 3)
+        puts "error in delete need at least 3 tokens; delete list_name item_Text"
+        return false
+      end
+      command = "delete"
+      #get rid of "delete " from the message
+      #TODO better to delete 1 el from splitter array
+      new_str = full_message[7...full_message.size]
+      splitter = new_str.split( ' ', 3 )
+    end
+ 
+    if splitter.size == 1
       #Create an empty list
-      owner = author
       list_name = splitter[0]
       
       if list_name[0] == 64 # @ sign
@@ -36,7 +105,6 @@ module ListsHelper
       puts "1 token - create empty list"
       
     elsif splitter.size == 2
-      owner = author
       list_name = splitter[0]
       text = splitter[1]
       
@@ -54,7 +122,6 @@ module ListsHelper
         text = splitter[2]
         puts("someone elses list " + owner)
       else
-        owner = author
         list_name = splitter[0]
         text = splitter[1] + ' ' + splitter[2]
         puts ("3 tokens author's list")
@@ -67,17 +134,26 @@ module ListsHelper
       
     text.strip() #remove whitespace from ends
     
+    if list_name[0] == 64 # @ we don't want this in list names
+      puts("Error @ sign in list name")
+      return false
+    end
+    
+    if command == "delete"
+      return delete_tweet( list_name, owner, author, text, submitted )
+    else
+      return insert( list_name, owner, author, text, full_message, submitted )
+    end
+  end
+    
+  #return true if found the item
+  def insert( list_name, owner, author, text, full_message, submitted )
     # TODO Checking friendship existance requires oauth
     #    if owner != author and not base.friendship_exists?(owner, author)
     #      puts(owner + " does not follow " + author + ". Not adding list.")
     #    else
     #      puts (owner + " " + author + " are friends, adding to list.")
     #    end
-    
-    if list_name[0] == 64 # @ we don't want this in list names
-      puts("Error @ sign in list name")
-      return false
-    end
     
     @list = List.find( :first, 
                        :conditions => { :name =>  list_name,
@@ -107,7 +183,7 @@ module ListsHelper
     #we find something.
     @item = Item.find( :first,
                        :conditions => { :author => author,
-                                        :fullMessage   => fullMessage } ) 
+                                        :fullMessage   => full_message } ) 
     #Clean up this search by using the submit time and the list name or ID TODO
     #TODO really need to check submit time to make sure it's the same message
     if @item
@@ -117,7 +193,7 @@ module ListsHelper
     
     @item = @list.items.build( {  :author => author,
                                   :text => text,
-                                  :fullMessage => fullMessage,
+                                  :fullMessage => full_message,
                                   :submitted => submitted } )
     @item.save #TODO error handling
     print "item saved"
@@ -133,47 +209,75 @@ module ListsHelper
         author = twit.sender.screen_name
       end
       
-      fullMessage = twit.text
+      full_message = twit.text
       submitted = twit.created_at
       
       if replies
         #remove '@listous' if it's at the front.
         #don't process as a list item if @listous appears anywhere else
-        if fullMessage[0...8] != "@listous"
+        if full_message[0...8] != "@listous"
           puts("ignoring reply since @listous not at front")
           next
         else
           puts("stripping @listous from front of reply")
-          fullMessage = fullMessage[8...fullMessage.size]
+          full_message = full_message[8...full_message.size]
         end
       end
       
       #If parseTweet returns true then we have seen the message
       #already, so we have seen all remaining messages and 
       # can stop processing.
-      if parseTweet( author, fullMessage, submitted )
+      if parseTweet( author, full_message, submitted )
         break
       end   
     end
   end
   
   def pollTwitter()
-    httpauth = Twitter::HTTPAuth.new("listous", "")
+    httpauth = Twitter::HTTPAuth.new("listous", "Sum1m@sen")
     base = Twitter::Base.new(httpauth)
     
-    #print "User Timeline"
+    print "User Timeline"
     #pp base.user_timeline
     
-    #print "Direct Messages"
-    #pp base.direct_messages
+    print "Direct Messages"
+    pp base.direct_messages
     parseTweets( base.direct_messages )
     
     #print "Replies"
-    #pp base.replies
+    pp base.replies
     parseTweets( base.replies, true )
     
     #print "User Info"
     #pp base.verify_credentials
   end
   
+  def parseUserMention ( author, owner, full_message, regexp, submitted )
+    m = regexp.match( full_message )
+    # TODO assert 2 matches
+    if m
+      list_name = m[1]
+      text = m[2]
+      return insert( list_name, owner, author, text, full_message, submitted )
+    else
+      #TODO error handling
+    end    
+  end
+    
+  def pollMentions( username, regexp )
+        httpauth = Twitter::HTTPAuth.new("listous", "Sum1m@sen")
+    base = Twitter::Base.new(httpauth)
+    query ={ :screen_name => username }
+    tweets = base.user_timeline( query )
+    
+    tweets.each do |twit|
+      if twit.user.name == username
+        puts "written by user " + username
+        next
+      else
+        puts "someone else " + twit.user.name
+      end
+    end  
+  end
+    
 end
