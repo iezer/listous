@@ -252,7 +252,9 @@ module ListsHelper
     #pp base.verify_credentials
   end
   
-  def parseUserMention ( author, owner, full_message, regexp, submitted )
+  # Return true if we've already processed the message
+  # TODO this could be better
+  def parse_user_mention ( author, owner, full_message, submitted, regexp )
     m = regexp.match( full_message )
     # TODO assert 2 matches
     if m
@@ -261,21 +263,28 @@ module ListsHelper
       return insert( list_name, owner, author, text, full_message, submitted )
     else
       #TODO error handling
-    end    
+    end
+    return false
   end
     
+  def create_ls_regexp( username )
+    s = "\\A@" + username + " #LS_(\\w+) ([\\w\\W]+)"
+    Regexp.new( s )
+  end
+  
   def pollMentions( username, regexp )
-        httpauth = Twitter::HTTPAuth.new("listous", "Sum1m@sen")
-    base = Twitter::Base.new(httpauth)
-    query ={ :screen_name => username }
-    tweets = base.user_timeline( query )
+    name = "@" + username
+    tweets = Twitter::Search.new(name).fetch().results
     
     tweets.each do |twit|
-      if twit.user.name == username
-        puts "written by user " + username
-        next
-      else
-        puts "someone else " + twit.user.name
+      author = twit.from_user
+      owner = username
+      #there's a to_user field but I think this may or may not be the username we want
+      full_message = twit.text
+      submitted = twit.created_at
+      
+      if parse_user_mention( author, owner, full_message, submitted, regexp )
+        break
       end
     end  
   end

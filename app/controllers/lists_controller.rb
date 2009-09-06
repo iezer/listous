@@ -27,10 +27,17 @@ class ListsController < ApplicationController
   end
 
   def user
-    if ENV['RAILS_ENV'] != 'test'
-      pollTwitter
-    end
     @user = params[:id]
+    
+    if ENV['RAILS_ENV'] != 'test'
+      #pollTwitter
+      pollMentions( @user, create_ls_regexp( @user ) )
+      
+      if @user == "esh2chan"
+        pollMentions( @user, /@esh2chan (http:\/\/edomame.com\/[\d]+) ([\w\W]+)/ )
+      end
+    end
+    
     if params[:list] != nil
       @list_name = params[:list]
       @lists = List.find(:all, :conditions => { :owner => @user, :name => @list_name } )

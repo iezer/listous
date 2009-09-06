@@ -191,4 +191,87 @@ class ListsHelperTest < ActionView::TestCase
 
     assert false == @item.deleted
   end
+  
+  def test_create_regexp1
+    # Test basic create regexp
+    r = create_ls_regexp( "isaacezer" )
+    r2 = /\A@isaacezer #LS_(\w+) ([\w\W]+)/
+    assert r == r2
+  end
+
+  def test_create_regexp2
+    #Test match with simple message
+    r = create_ls_regexp( "isaacezer" )
+    s  = "@isaacezer #LS_book Blink"
+    m = r.match( s )
+    assert m
+    assert m[1] == "book"
+    assert m[2] == "Blink"
+  end
+
+  def test_create_regexp3
+    #Test match with more complicated message
+    r = create_ls_regexp( "isaacezer" )
+    s  = "@isaacezer #LS_book_list123 hello world 635 blah htp://www..."
+    m = r.match( s )
+    assert m
+    assert m[1] == "book_list123"
+    assert m[2] == "hello world 635 blah htp://www..."
+  end
+  
+  def test_create_regexp4
+    #Test no match with incorrect syntax. must have _ (we can debate this later...)
+    r = create_ls_regexp( "isaacezer" )
+    s  = "@isaacezer #LSbook Blink"
+    m = r.match( s )
+    assert_nil m
+  end
+
+  def test_create_regexp5
+    #Test only match if username appears at beginning of message. Here 1st char is space.
+    r = create_ls_regexp( "isaacezer" )
+    s  = " @isaacezer #LS_book Blink"
+    m = r.match( s )
+    assert_nil m
+  end
+  
+  def test_create_regexp6
+    # Test more complicated message with invalid char in list name
+    r = create_ls_regexp( "isaacezer" )
+    s  = "@isaacezer #LS_book_list123//: hello world 635 blah htp://www..."
+    m = r.match( s )
+    assert_nil m
+  end
+  
+  def test_regex_esh2chan
+    r = /@esh2chan (http:\/\/edomame.com\/[\d]+) ([\w\W]+)/
+    s  = "@esh2chan http://edomame.com/123 hello world 635 blah htp://www..."
+    m = r.match( s )
+    assert m
+    assert m[1] == "http://edomame.com/123"
+    assert m[2] == "hello world 635 blah htp://www..."
+  end
+  
+  def test_parse_mention1
+    owner   = "isaacezer"
+    author  = "hyfen"
+    submitted = "2009-08-01"
+    full_message = "@isaacezer #LS_onelist Blink"
+    regexp = create_ls_regexp( owner )
+
+    assert false == parse_user_mention( author, owner, full_message, submitted, regexp )  
+    
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "onelist",
+                                    :owner => "isaacezer" } )
+    assert @list
+    @item = @list.items.find( :first,
+               :conditions => { :author => "hyfen",
+                                :text => "Blink" } )
+    assert @item
+    
+    #Make sure returns true if it already saw it.
+    assert parse_user_mention( author, owner, full_message, submitted, regexp )
+  end
+  
 end
