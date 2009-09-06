@@ -1,0 +1,49 @@
+<% title "Listous: Social Lists with Twitter" %>
+
+<h1>Listous</h1>
+<p>Welcome to <b>Listous</b>. Start twittering <a href="http://www.twitter.com/listous"><b>@listous</b></a> to create lists.</p>
+<h2>Instructions</h2>
+
+<p>Send a message to Listous to create a new list. That's it. For example:
+<ul>
+	<li>@listous books The Tipping Point</li>
+	<li>D listous books The Tipping Point <i>(NB You can't send Listous a direct message until we follow you. We're working to make this automatic ASAP).</i></li>
+</ul>
+This creates a list called books with the 1st entry "The Tipping Point". Use the same list name again to add to it. 
+</p>
+
+<p>You can also add to your friend's lists.
+<ul>
+	<li>@listous @isaacezer books The Tipping Point</li>
+	<li>D listous @isaacezer books The Tipping Point</li>
+</ul>
+
+We think this is the most exciting part as it makes it very easy to collaborate and brainstorm using Twitter.
+</p>
+
+<p>
+	Imagine your friend <i>@isaacezer</i> is hosting a party and you want to say you'll bring some beer.
+	<i>"@listous @isaacezer party beer"</i> or <i>"D listous @isaacezer party beer"</i> Will add an entry
+	<i>beer</i> to <i>@isaacezer</i>'s list called <i>party.</i>
+</p>
+
+<h2>People who are using Listous</h2>
+<ul>
+	<% @owners.each do |owner| %>
+		<li>
+			<%= link_to "@" + owner, :controller => "lists", :action => "user", :id => owner %>
+		</li>
+	<% end %>
+</ul>
+
+<h2> Got Some feedback?</h2>
+
+Send it to <b>@listous</b> on twitter!
+
+<ul>
+<li>@listous <b>bugs</b> You gotta fix this...</li>
+<li>@listous <b>features</b> It would be great if listous could...</li>
+</ul>
+
+
+Created by <a href="http://www.isaacezer.com">Isaac Ezer</a>.
