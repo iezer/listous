@@ -234,19 +234,22 @@ module ListsHelper
   end
   
   def pollTwitter()
-    httpauth = Twitter::HTTPAuth.new("listous", "Sum1m@sen")
+    httpauth = Twitter::HTTPAuth.new("listous", "")
     base = Twitter::Base.new(httpauth)
     
     print "User Timeline"
     #pp base.user_timeline
     
     print "Direct Messages"
-    pp base.direct_messages
-    parseTweets( base.direct_messages )
+    dm = base.direct_messages
+    
+    pp dm
+    parseTweets( dm )
     
     #print "Replies"
-    pp base.replies
-    parseTweets( base.replies, true )
+    replies = base.replies
+    pp replies
+    parseTweets( replies, true )
     
     #print "User Info"
     #pp base.verify_credentials
