@@ -12,7 +12,7 @@ while 1
     pollTwitter()
   rescue
     puts "error in pollTwitter() sending dm."
-    #send_dm( "isaacezer", "Error during Listous loop pollTwitter() " + date.to_s )
+    send_dm( "isaacezer", "Error during Listous loop pollTwitter() " + date.to_s )
     success = false
   end
   
@@ -21,14 +21,14 @@ while 1
     get_all_users_mentions()
   rescue
     puts "Error polling users' mentions"
-    #send_dm( "isaacezer", "Error during Listous loop get_all_users_mentions() " + date.to_s )
+    send_dm( "isaacezer", "Error during Listous loop get_all_users_mentions() " + date.to_s )
     success = false
   end
   
   if success
     if last_report_day != date.day
       puts ("Success")
-      #send_dm( "isaacezer", "Listous loop working fine " + date.to_s )
+      send_dm( "isaacezer", "Listous loop working fine " + date.to_s )
       last_report_day = date.day
     end
   else
