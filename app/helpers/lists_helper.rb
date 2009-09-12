@@ -3,7 +3,7 @@ require 'rubygems'
 require 'twitter'
 
 USERNAME = "listous"
-PASSWORD = "Sum1m@sen"
+PASSWORD = ""
   
 module ListsHelper
   
