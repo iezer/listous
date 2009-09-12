@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%=h @user.twitter_id %>
+</p>
+
+<p>
+  <b>Last mention:</b>
+  <%=h @user.last_mention %>
+</p>
+
+<p>
+  <b>Last dm:</b>
+  <%=h @user.last_dm %>
+</p>
+
+<p>
+  <b>Welcomed:</b>
+  <%=h @user.welcomed %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

@@ -1,0 +1,28 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Twitter</th>
+    <th>Last mention</th>
+    <th>Last dm</th>
+    <th>Welcomed</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%=h user.name %></td>
+    <td><%=h user.twitter_id %></td>
+    <td><%=h user.last_mention %></td>
+    <td><%=h user.last_dm %></td>
+    <td><%=h user.welcomed %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path %>
