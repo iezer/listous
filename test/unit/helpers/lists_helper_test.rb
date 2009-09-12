@@ -56,7 +56,7 @@ class ListsHelperTest < ActionView::TestCase
                                         :text => "jazz" } ) 
     assert @item
   end
-
+  
   def test_add_to_someone_elses_list_not_exist
     assert false == parseTweet( "hyfen", "@isaacezer nolist jazz", "2009-08-01" )
     
@@ -65,7 +65,7 @@ class ListsHelperTest < ActionView::TestCase
                                         :owner => "isaacezer" } )
     assert_nil @list
   end
-
+  
   def add_duplicate_diff_time_ok
     assert false == parseTweet( "isaacezer", "emptylist jazz", "2009-08-01" )
     assert false == parseTweet( "isaacezer", "emptylist jazz", "2009-08-02" )
@@ -75,7 +75,7 @@ class ListsHelperTest < ActionView::TestCase
                                         :owner => "isaacezer" } )
     assert_nil @list
   end
-
+  
   def add_duplicate
     assert false == parseTweet( "isaacezer", "emptylist jazz", "2009-08-01" )
     assert true  == parseTweet( "isaacezer", "emptylist jazz", "2009-08-01" )
@@ -89,21 +89,21 @@ class ListsHelperTest < ActionView::TestCase
   def test_delete
     assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
     assert false == parseTweet( "isaacezer", "books Blink", "2009-08-01" )
-
+    
     @list = List.find( :first, 
                    :conditions => { :name =>  "books",
                                     :owner => "isaacezer" } )
     assert @list.items.size == 2
-
+    
     assert @item
     assert false == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
     @item = @list.items.find( :first,
                :conditions => { :author => "isaacezer",
                                 :text => "Blink" } )
-
+    
     assert true == @item.deleted
   end
-
+  
   def test_delete_twice
     assert false == parseTweet( "isaacezer", "books Blink", "2009-08-01" )
     assert false == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
@@ -123,72 +123,72 @@ class ListsHelperTest < ActionView::TestCase
   def test_delete_non_owner
     assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
     assert false == parseTweet( "hyfen", "@isaacezer books Blink", "2009-08-01" )
-
+    
     @list = List.find( :first, 
                    :conditions => { :name =>  "books",
                                     :owner => "isaacezer" } )
     assert @list.items.size == 2
-
+    
     assert @item
     assert false == parseTweet( "hyfen", "delete @isaacezer books Blink", "2009-08-01" )
     @item = @list.items.find( :first,
                :conditions => { :author => "hyfen",
                                 :text => "Blink" } )
-
+    
     assert true == @item.deleted
   end
-
+  
   def test_delete_non_owner_by_owner
     assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
     assert false == parseTweet( "hyfen", "@isaacezer books Blink", "2009-08-01" )
-
+    
     @list = List.find( :first, 
                    :conditions => { :name =>  "books",
                                     :owner => "isaacezer" } )
     assert @list.items.size == 2
-
+    
     assert @item
     assert false == parseTweet( "isaacezer", "delete books Blink", "2009-08-01" )
     @item = @list.items.find( :first,
                :conditions => { :author => "hyfen",
                                 :text => "Blink" } )
-
+    
     assert true == @item.deleted
   end
   
   def test_delete_non_owner1
     assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
     assert false == parseTweet( "isaacezer", "books Blink", "2009-08-01" )
-
+    
     @list = List.find( :first, 
                    :conditions => { :name =>  "books",
                                     :owner => "isaacezer" } )
     assert @list.items.size == 2
-
+    
     assert @item
     assert false == parseTweet( "hyfen", "delete @isaacezer books Blink", "2009-08-01" )
     @item = @list.items.find( :first,
                :conditions => { :author => "isaacezer",
                                 :text => "Blink" } )
-
+    
     assert false == @item.deleted
   end
   
   def test_delete_non_owner2
     assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
     assert false == parseTweet( "hyfen", "@isaacezer books Blink", "2009-08-01" )
-
+    
     @list = List.find( :first, 
                    :conditions => { :name =>  "books",
                                     :owner => "isaacezer" } )
     assert @list.items.size == 2
-
+    
     assert @item
     assert false == parseTweet( "esh2chan", "delete @isaacezer books Blink", "2009-08-01" )
     @item = @list.items.find( :first,
                :conditions => { :author => "hyfen",
                                 :text => "Blink" } )
-
+    
     assert false == @item.deleted
   end
   
@@ -200,11 +200,11 @@ class ListsHelperTest < ActionView::TestCase
     @list = List.find( :first, 
                    :conditions => { :name =>  "books",
                                     :owner => "isaacezer" } )
-                                    
+    
     @item = @list.items.find( :first,
                :conditions => { :author => "isaacezer",
                                 :text => "The Tipping Point" } )
-
+    
     assert true == @item.deleted
     
   end
@@ -215,7 +215,7 @@ class ListsHelperTest < ActionView::TestCase
     r2 = /\A@isaacezer #LS_(\w+) ([\w\W]+)/
     assert r == r2
   end
-
+  
   def test_create_regexp2
     #Test match with simple message
     r = create_ls_regexp( "isaacezer" )
@@ -225,7 +225,7 @@ class ListsHelperTest < ActionView::TestCase
     assert m[1] == "book"
     assert m[2] == "Blink"
   end
-
+  
   def test_create_regexp3
     #Test match with more complicated message
     r = create_ls_regexp( "isaacezer" )
@@ -243,7 +243,7 @@ class ListsHelperTest < ActionView::TestCase
     m = r.match( s )
     assert_nil m
   end
-
+  
   def test_create_regexp5
     #Test only match if username appears at beginning of message. Here 1st char is space.
     r = create_ls_regexp( "isaacezer" )
@@ -275,7 +275,7 @@ class ListsHelperTest < ActionView::TestCase
     submitted = "2009-08-01"
     full_message = "@isaacezer #LS_onelist Blink"
     regexp = create_ls_regexp( owner )
-
+    
     assert false == parse_user_mention( author, owner, full_message, submitted, regexp )  
     
     @list = List.find( :first, 
