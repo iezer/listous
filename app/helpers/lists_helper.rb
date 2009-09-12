@@ -2,25 +2,26 @@ require 'pp'
 require 'rubygems'
 require 'twitter'
 
-module ListsHelper
+USERNAME = "listous"
+PASSWORD = "Sum1m@sen"
   
-  USERNAME = "listous"
-  PASSWORD = ""
+module ListsHelper
   
   def owners()
     list_owners = Array.new  
     List.all.each do |list|
-      puts(list.owner)
-      list_owners.push(list.owner)
+      #puts(list.owner)
+      list_owners << list.owner
     end
     
     list_owners = list_owners.sort
     list_owners = list_owners.uniq
+    return list_owners
   end
   
   #Return true if already processed
   def delete_tweet( list_name, owner, author, text, submitted )
-    puts "in delete " + author + " " + list_name + " " + text + " " + submitted
+    puts "in delete " + author + " " + list_name + " " + text + " " + submitted.to_s
     if list_name[0] == 64 # @ we don't want this in list names
       puts("Error @ sign in list name. Can't delete someone elses list.")
       return false
@@ -223,7 +224,7 @@ module ListsHelper
       end
       
       full_message = twit.text
-      submitted = twit.created_at
+      submitted = DateTime.parse( twit.created_at )
       
       if replies
         #remove '@listous' if it's at the front.
@@ -313,7 +314,7 @@ module ListsHelper
       owner = username
       #there's a to_user field but I think this may or may not be the username we want
       full_message = twit.text
-      submitted = twit.created_at
+      submitted = DateTime.parse( twit.created_at )
       
       if parse_user_mention( author, owner, full_message, submitted, regexp )
         break
@@ -328,8 +329,9 @@ module ListsHelper
   end
   
   def get_all_users_mentions()
-    @owners = owners()
-    @owners.each do |owner|
+    owners = owners()
+    owners.delete( "listous" )
+    owners.each do |owner|
       pollMentions( owner, create_ls_regexp( owner ) )
       
       if owner == "esh2chan"
