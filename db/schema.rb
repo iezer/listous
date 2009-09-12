@@ -9,22 +9,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090801085804) do
+ActiveRecord::Schema.define(:version => 20090905032202) do
 
   create_table "items", :force => true do |t|
     t.string   "author"
     t.string   "text"
     t.string   "fullMessage"
-    t.date     "submitted"
+    t.datetime "submitted"
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "deleted",     :default => false
   end
 
   create_table "lists", :force => true do |t|
     t.string   "name"
     t.string   "owner"
     t.string   "permission"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "deleted",    :default => false
+    t.string   "regexp"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.integer  "twitter_id"
+    t.integer  "last_mention"
+    t.integer  "last_dm"
+    t.boolean  "welcomed",     :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
