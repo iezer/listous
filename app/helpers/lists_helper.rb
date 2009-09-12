@@ -4,26 +4,28 @@ require 'twitter'
 
 module ListsHelper
   
+  USERNAME = "listous"
+  PASSWORD = ""
+  
   def owners()
-    list_owners = []  
-    List.each do |list|
+    list_owners = Array.new  
+    List.all.each do |list|
+      puts(list.owner)
       list_owners.push(list.owner)
     end
     
     list_owners = list_owners.sort
-    list_owners = list_owners.unique
-    
-    return list_owners
+    list_owners = list_owners.uniq
   end
   
-    #Return true if already processed
+  #Return true if already processed
   def delete_tweet( list_name, owner, author, text, submitted )
     puts "in delete " + author + " " + list_name + " " + text + " " + submitted
     if list_name[0] == 64 # @ we don't want this in list names
       puts("Error @ sign in list name. Can't delete someone elses list.")
       return false
     end
-
+    
     #Created a list but no more items
     if text == ""
       #Can't delete if no text. use delete_list
@@ -37,17 +39,27 @@ module ListsHelper
       #Error can't delete can't find list TODO
       return false
     end
-
+    
     #Check if the item exists, since we assume the messages
     #come in chronological order, we can just break when
     #we find something.
     @item = Item.find( :first,
                        :conditions => { :author => author,
                                         :text   => text } ) 
-
+    
     if @item == nil and owner == author
       @item = Item.find( :first,
                          :conditions => { :text   => text } ) 
+    end
+    
+    if @item == nil
+      @item = Item.find( :first,
+      :conditions=> ["author = ? and text like ?", author, text + "%"] ) 
+    end
+    
+    if @item == nil and owner == author
+      @item = Item.find( :first,
+                         :conditions=> ["text like ?", text + "%"]  )
     end
     
     #Clean up this search by using the submit time and the list name or ID TODO
@@ -91,7 +103,7 @@ module ListsHelper
       new_str = full_message[7...full_message.size]
       splitter = new_str.split( ' ', 3 )
     end
- 
+    
     if splitter.size == 1
       #Create an empty list
       list_name = splitter[0]
@@ -131,7 +143,7 @@ module ListsHelper
     list_name = list_name.downcase
     owner = owner.downcase
     author = author.downcase
-      
+    
     text.strip() #remove whitespace from ends
     
     if list_name[0] == 64 # @ we don't want this in list names
@@ -145,7 +157,7 @@ module ListsHelper
       return insert( list_name, owner, author, text, full_message, submitted )
     end
   end
-    
+  
   #return true if found the item
   def insert( list_name, owner, author, text, full_message, submitted )
     # TODO Checking friendship existance requires oauth
@@ -183,11 +195,12 @@ module ListsHelper
     #we find something.
     @item = Item.find( :first,
                        :conditions => { :author => author,
-                                        :fullMessage   => full_message } ) 
+                                        :text   => text,
+                                        :submitted => submitted } ) 
     #Clean up this search by using the submit time and the list name or ID TODO
     #TODO really need to check submit time to make sure it's the same message
     if @item
-      puts("Already say this element before")
+      puts("Already saw this element before")
       return true
     end
     
@@ -233,9 +246,25 @@ module ListsHelper
     end
   end
   
-  def pollTwitter()
+  def check_friendship ( list_owner, list_editor )
     httpauth = Twitter::HTTPAuth.new("listous", "")
-    base = Twitter::Base.new(httpauth)
+    base = Twitter::Base.new( httpauth )
+    #base = Twitter::Base.new( Twitter::Search.new() )
+    b = false
+    puts "Checking friendship " + list_owner + " " + list_editor + " "
+    begin
+      b = base.friendship_exists?( list_owner, list_editor )
+    rescue
+      b = false
+    end
+    pp b
+    return false
+  end
+  
+  def pollTwitter()
+    
+    httpauth = Twitter::HTTPAuth.new( USERNAME, PASSWORD )
+    base = Twitter::Base.new( httpauth )
     
     print "User Timeline"
     #pp base.user_timeline
@@ -249,7 +278,7 @@ module ListsHelper
     #print "Replies"
     replies = base.replies
     pp replies
-    parseTweets( replies, true )
+    parseTweets( replies, true )    
     
     #print "User Info"
     #pp base.verify_credentials
@@ -269,7 +298,7 @@ module ListsHelper
     end
     return false
   end
-    
+  
   def create_ls_regexp( username )
     s = "\\A@" + username + " #LS_(\\w+) ([\\w\\W]+)"
     Regexp.new( s )
@@ -291,5 +320,21 @@ module ListsHelper
       end
     end  
   end
-    
+  
+  def send_dm( user, message )  
+    httpauth = Twitter::HTTPAuth.new( USERNAME, PASSWORD )
+    base = Twitter::Base.new( httpauth )
+    base.direct_message_create( user, message )
+  end
+  
+  def get_all_users_mentions()
+    @owners = owners()
+    @owners.each do |owner|
+      pollMentions( owner, create_ls_regexp( owner ) )
+      
+      if owner == "esh2chan"
+        pollMentions( owner, /@esh2chan (http:\/\/edomame.com\/[\d]+) ([\w\W]+)/ )
+      end
+    end  
+  end
 end

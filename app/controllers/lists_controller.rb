@@ -5,20 +5,9 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.xml
   def index
-    if ENV['RAILS_ENV'] != 'test'
-      pollTwitter
-    end
     @lists = List.all
  
-    @owners = Array.new  
-    List.all.each do |list|
-      puts(list.owner)
-      @owners.push(list.owner)
-    end
-    
-    @owners = @owners.sort
-    @owners = @owners.uniq
-    
+    @owners = owners()
     
     respond_to do |format|
       format.html # index.html.erb
@@ -28,15 +17,6 @@ class ListsController < ApplicationController
 
   def user
     @user = params[:id]
-    
-    if ENV['RAILS_ENV'] != 'test'
-      #pollTwitter
-      pollMentions( @user, create_ls_regexp( @user ) )
-      
-      if @user == "esh2chan"
-        pollMentions( @user, /@esh2chan (http:\/\/edomame.com\/[\d]+) ([\w\W]+)/ )
-      end
-    end
     
     if params[:list] != nil
       @list_name = params[:list]

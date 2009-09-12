@@ -192,6 +192,23 @@ class ListsHelperTest < ActionView::TestCase
     assert false == @item.deleted
   end
   
+  def test_delete_substring
+    #Since tweets are max 140 chars, we may have to delete by matching only a subset
+    assert false == parseTweet( "isaacezer", "books The Tipping Point", "2009-08-01" )
+    assert false == parseTweet( "isaacezer", "delete @isaacezer books The Tipping", "2009-08-01" )
+    
+    @list = List.find( :first, 
+                   :conditions => { :name =>  "books",
+                                    :owner => "isaacezer" } )
+                                    
+    @item = @list.items.find( :first,
+               :conditions => { :author => "isaacezer",
+                                :text => "The Tipping Point" } )
+
+    assert true == @item.deleted
+    
+  end
+  
   def test_create_regexp1
     # Test basic create regexp
     r = create_ls_regexp( "isaacezer" )
